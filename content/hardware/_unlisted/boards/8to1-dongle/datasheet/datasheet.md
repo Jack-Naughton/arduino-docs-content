@@ -18,6 +18,8 @@ type: maker
 
 ### General Specifications
 
+![USB Type-C 8-in-1 Top/Bottom Views](assets/dongle_views.png)
+
 | **Feature**  | **Specification**                      |
 |--------------|----------------------------------------|
 | Model Number | TPX00241                               |
