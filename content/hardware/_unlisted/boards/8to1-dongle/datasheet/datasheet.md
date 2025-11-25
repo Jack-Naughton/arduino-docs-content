@@ -36,30 +36,29 @@ type: maker
 
 | **Port Type**                 | **Quantity** | **Specification**                                  |
 |-------------------------------|--------------|----------------------------------------------------|
-| USB-C PD (Power) (A1)         | 1×           | 65 W Power Delivery                                |
-| USB-C Data (A2)               | 1×           | 480 Mbps                                           |
-| USB-A 2.0 (B2)                | 1×           | 480 Mbps                                           |
-| USB-A 3.0 (B3)                | 1×           | 5 Gbps (USB 3.0 speed)                             |
-| HDMI (B1)                     | 1×           | 4K @ 30 Hz (3840 × 2160)                           |
-| RJ45 Ethernet (C1)            | 1×           | 100 Mbps Fast Ethernet                             |
-| SD Card Reader (A4)           | 1×           | USB 2.0, supports SD/SDHC UHS-I-II / SDXC UHS-I-II |
-| TF (microSD) Card Reader (A3) | 1×           | Supports microSD/microSDHC UHS-I / microSDXC UHS-I |
+| USB-C PD (Power) (A1)         | 1            | 65 W Power Delivery                                |
+| USB-C Data (A2)               | 1            | 480 Mbps                                           |
+| USB-A 2.0 (B2)                | 1            | 480 Mbps                                           |
+| USB-A 3.0 (B3)                | 1            | 5 Gbps                                             |
+| HDMI (B1)                     | 1            | 4K @ 30 Hz (3840 × 2160)                           |
+| RJ45 Ethernet (C1)            | 1            | 100 Mbps                                           |
+| SD Card Reader (A4)           | 1            | USB 2.0, supports SD/SDHC UHS-I-II / SDXC UHS-I-II |
+| TF (microSD) Card Reader (A3) | 1            | Supports microSD/microSDHC UHS-I / microSDXC UHS-I |
 
 ### Operating Conditions
 
-| **Parameter**            | **Range**                     |
-|--------------------------|-------------------------------|
-| Working Temperature      | 0 °C – 50 °C                  |
-| Storage Temperature      | -20 °C – 60 °C                |
-| Operating Humidity       | 10% – 90% RH (non-condensing) |
+| **Parameter**       | **Range**      |
+|---------------------|----------------|
+| Working Temperature | 0 °C – 50 °C   |
+| Storage Temperature | -20 °C – 60 °C |
 
 ### Compatibility
 
-| **System**               | **Version**                   |
-|--------------------------|-------------------------------|
-| Windows                  | XP / 7 / 8 / 10 / 11          |
-| macOS                    | 10.2.8 and above              |
-| Linux                    | Supported                     |
+| **System** | **Version**          |
+|------------|----------------------|
+| Windows    | XP / 7 / 8 / 10 / 11 |
+| macOS      | 10.2.8 and above     |
+| Linux      | Supported            |
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
   <strong>Note:</strong> This dongle is plug-and-play compatible with most operating systems. No additional drivers are required for basic functionality.
@@ -69,7 +68,7 @@ type: maker
 
 ## Usage with Arduino® UNO Q
 
-<p style="text-align: justify;">The USB Type-C 8-in-1 Dongle is designed to expand the connectivity of the Arduino® UNO Q board, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with the UNO Q in Single-Board Computer (SBC) mode, this dongle enables a full desktop computing experience.</p>
+<p style="text-align: justify;">The USB Type-C 8-in-1 Dongle is designed to expand the connectivity of the Arduino® UNO Q, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with the UNO Q in Single-Board Computer (SBC) mode, this dongle enables a full desktop computing experience.</p>
 
 ### Key Use Cases
 
@@ -87,36 +86,38 @@ type: maker
 
 <p style="text-align: justify;">Connect the dongle's USB-C male connector to the UNO Q's USB-C port. Attach the external power supply to the dongle's USB-C PD port. Once powered, the connected peripherals will be automatically detected by the operating system.</p>
 
+![USB Type-C 8-in-1 Dongle with UNO Q](assets/dongle_unoq.png)
+
 <div style="page-break-after: always;"></div>
 
 ## Technical Specifications
 
 ### Video Output
 
-| **Parameter**            | **Specification**             |
-|--------------------------|-------------------------------|
-| Interface                | HDMI Type-A                   |
-| Maximum Resolution       | 4K (3840 × 2160) @ 30 Hz      |
-| Supported Resolutions    | 1080p, 720p, 480p             |
-| Audio Support            | HDMI audio pass-through       |
+| **Parameter**         | **Specification**        |
+|-----------------------|--------------------------|
+| Interface             | HDMI Type-A              |
+| Maximum Resolution    | 4K (3840 × 2160) @ 30 Hz |
+| Supported Resolutions | 1080p, 720p, 480p        |
+| Audio Support         | HDMI audio pass-through  |
 
 ### Network
 
-| **Parameter**            | **Specification**             |
-|--------------------------|-------------------------------|
-| Interface                | RJ45 Ethernet                 |
-| Speed                    | 10/100 Mbps (Fast Ethernet)   |
-| Chipset                  | RTL8152B                      |
+| **Parameter** | **Specification**           |
+|---------------|-----------------------------|
+| Interface     | RJ45 Ethernet               |
+| Speed         | 10/100 Mbps (Fast Ethernet) |
+| Chipset       | RTL8152B                    |
 
 ### Card Readers
 
-| **Parameter**            | **SD Card Reader**                           | **TF Card Reader**                          |
-|--------------------------|----------------------------------------------|---------------------------------------------|
-| Interface Speed          | USB 2.0 (480 Mbps)                           | USB 2.0 (480 Mbps)                          |
-| Supported Cards          | SD, SDHC (UHS-I-II), SDXC (UHS-I-II)         | microSD, microSDHC (UHS-I), microSDXC (UHS-I)|
-| Maximum Capacity         | Up to 2 TB (SDXC)                            | Up to 2 TB (microSDXC)                      |
-| Chipset                  | GL823K                                       | GL823K                                      |
-| LED Indicator            | Not available                                | Not available                               |
+| **Parameter**    | **SD Card Reader**                   | **TF Card Reader**                            |
+|------------------|--------------------------------------|-----------------------------------------------|
+| Interface Speed  | USB 2.0 (480 Mbps)                   | USB 2.0 (480 Mbps)                            |
+| Supported Cards  | SD, SDHC (UHS-I-II), SDXC (UHS-I-II) | microSD, microSDHC (UHS-I), microSDXC (UHS-I) |
+| Maximum Capacity | Up to 2 TB (SDXC)                    | Up to 2 TB (microSDXC)                        |
+| Chipset          | GL823K                               | GL823K                                        |
+| LED Indicator    | Not available                        | Not available                                 |
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
   <strong>Note:</strong> Both card readers can be used simultaneously. Ensure cards are properly formatted (FAT32, exFAT, or NTFS) for compatibility with your operating system.
@@ -124,11 +125,11 @@ type: maker
 
 ### Power Delivery
 
-| **Parameter**            | **Specification**             |
-|--------------------------|-------------------------------|
-| Input Voltage            | 5 V – 20 V (USB PD standard)  |
-| Maximum Power            | 65 W                          |
-| Output to Device         | Pass-through (minus losses)   |
+| **Parameter**    | **Specification**            |
+|------------------|------------------------------|
+| Input Voltage    | 5 V – 20 V (USB PD standard) |
+| Maximum Power    | 65 W                         |
+| Output to Device | Pass-through                 |
 
 <p style="text-align: justify;">The USB-C PD port supports USB Power Delivery negotiation up to 65 W. The actual power delivered to the connected device (e.g., UNO Q) depends on the power supply capability and the device's power requirements. When multiple peripherals are connected, ensure the power supply can handle the combined load.</p>
 
@@ -138,23 +139,21 @@ type: maker
 
 ### Dimensions
 
-<p style="text-align: justify;">The dongle features a compact form factor suitable for portable use alongside the Arduino® UNO Q board. The attached cable provides flexibility for connection without blocking adjacent ports.</p>
+<p style="text-align: justify;">The dongle features a compact form factor suitable for portable use alongside the Arduino® UNO Q. The attached cable provides flexibility for connection without blocking adjacent ports.</p>
 
 ![Dongle Dimensions](assets/mechanical_drawing_dongle.png)
 
-| **Dimension**            | **Measurement**               |
-|--------------------------|-------------------------------|
-| Length                   | 119 mm                        |
-| Width                    | 27.8 mm                       |
-| Height                   | 16 mm                         |
-| Cable Length             | 175 mm                        |
-| Weight                   | 60 g                          |
+| **Dimension** | **Measurement** |
+|---------------|-----------------|
+| Length        | 119 mm          |
+| Width         | 27.8 mm         |
+| Height        | 16 mm           |
+| Cable Length  | 175 mm          |
+| Weight        | 60 g            |
 
 ### Package Contents
 
 - 1× USB Type-C 8-in-1 Dongle
-- 1× User manual
-- 1× Gift box packaging
 
 <div style="page-break-after: always;"></div>
 
@@ -215,13 +214,13 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 # Reference Documentation
 
-| No. | Reference                      | Link                                                                                     |
-|:---:|--------------------------------|------------------------------------------------------------------------------------------|
-|  1  | Arduino UNO Q Documentation    | [https://docs.arduino.cc/hardware/uno-q/](https://docs.arduino.cc/hardware/uno-q/)       |
-|  2  | Arduino Store                  | [https://store.arduino.cc/](https://store.arduino.cc/)                                   |
+| No. | Reference                   | Link                                                                               |
+|:---:|-----------------------------|------------------------------------------------------------------------------------|
+|  1  | Arduino UNO Q Documentation | [https://docs.arduino.cc/hardware/uno-q/](https://docs.arduino.cc/hardware/uno-q/) |
+|  2  | Arduino Store               | [https://store.arduino.cc/](https://store.arduino.cc/)                             |
 
 # Document Revision History
 
-|  **Date**  | **Revision** | **Changes**       |
-|:----------:|:------------:|-------------------|
-| 07/11/2025 |      1       | First release     |
+|  **Date**  | **Revision** | **Changes**   |
+|:----------:|:------------:|---------------|
+| 07/11/2025 |      1       | First release |
