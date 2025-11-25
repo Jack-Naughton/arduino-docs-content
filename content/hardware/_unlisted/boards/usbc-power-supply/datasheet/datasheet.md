@@ -8,7 +8,7 @@ type: maker
 
 # Description
 
-<p style="text-align: justify;">The Arduino® USB-C Power Supply (TPX00242) is a compact, interchangeable plug adapter designed for use with the Arduino® UNO Q and other USB-C devices supporting USB Power Delivery (PD). This 45W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5V, 9V, 12V, 15V, 20V), automatically negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.</p>
+<p style="text-align: justify;">The Arduino® USB-C Power Supply (TPX00242) is a compact, interchangeable plug adapter designed for use with the Arduino® UNO Q and other USB-C devices supporting USB Power Delivery (PD). The 45 W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5 V, 9 V, 12 V, 15 V, 20 V), negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -20,17 +20,16 @@ type: maker
 
 ![Arduino USB-C Power Supply](assets/power_supply_views.png)
 
-| **Feature**         | **Specification**                      |
-|---------------------|----------------------------------------|
-| Model Number        | TPX00242                               |
-| Manufacturer Model  | AS4801A-PD45DK                         |
-| Manufacturer        | Lanyue Electronics (Shenzhen) Co., Ltd |
-| Adapter Type        | Interchangeable plug-in adapter        |
-| Output Connector    | USB-C (USB Type-C)                     |
-| Dimensions (Body)   | 64 × 64 × 30 mm (excluding plug)       |
-| Weight              | Approximately 90 g (with plug)         |
-| Material            | PC (Polycarbonate) housing             |
-| Fire Rating         | UL94V-0                                |
+| **Feature**        | **Specification**                                                  |
+|--------------------|--------------------------------------------------------------------|
+| Model Number       | TPX00242                                                           |
+| Manufacturer Model | AS4801A-PD45DK                                                     |
+| Manufacturer       | Lanyue Electronics (Shenzhen) Co., Ltd                             |
+| Adapter Type       | Interchangeable plug-in adapter                                    |
+| Output Connector   | USB-C (USB Type-C)                                                 |
+| Dimensions (Body)  | 64 × 64 × 30 mm (folded plug) / 64 × 80.06 × 30 mm (unfolded plug) |
+| Material           | PC (Polycarbonate) housing                                         |
+| Fire Rating        | UL94V-0                                                            |
 
 ### Input Specifications
 
@@ -56,7 +55,7 @@ type: maker
 **Combined Maximum Output Power:** 45 W
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
-  <strong>Note:</strong> The power supply automatically negotiates the appropriate voltage and current with the connected device using USB Power Delivery (PD) protocol. The device will select the optimal power profile based on its requirements.
+  <strong>Note:</strong> The power supply negotiates the appropriate voltage and current with the connected device using USB Power Delivery (PD) protocol. The device will select the optimal power profile based on its requirements.
 </div>
 
 ### Power Delivery Protocols
@@ -70,22 +69,22 @@ type: maker
 
 ![Regional Plug Options](assets/plug_options.png)
 
-| **Region**              | **Plug Type** | **Dimensions**        |
-|-------------------------|---------------|-----------------------|
-| United States (Default) | Type A        | 18.4 × 27.5 × 8.15 mm |
-| Europe (EU)             | Type C        | 24.1 × 19.0 × 8.15 mm |
-| United Kingdom          | Type G        | 20.0 × 48.98 × 8.7 mm |
-| Australia (AU)          | Type I        | 20.0 × 28.0 × 8.7 mm  |
+| **Region**              | **Plug Type** | **Dimensions (W × H × D)**      |
+|-------------------------|---------------|---------------------------------|
+| United States (Default) | Type A        | Integrated (foldable)           |
+| Europe (EU)             | Type C        | 34.6-36.0 × 27.5 × 37 mm        |
+| United Kingdom          | Type G        | 48.98 × 39.83 × 22.23-23.23 mm* |
+| Australia (AU)          | Type I        | 20.0 × 16.99 × 8.69 mm          |
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
-  <strong>Note:</strong> Plugs are interchangeable and can be replaced without tools. Ensure the correct plug is attached for your region before use.
+  <strong>Note:</strong> Plugs are interchangeable and can be replaced without tools. Make sure the correct plug is attached for your region before use.
 </div>
 
 <div style="page-break-after: always;"></div>
 
 ## Usage with Arduino® UNO Q
 
-<p style="text-align: justify;">The Arduino USB-C Power Supply is specifically designed to provide optimal power delivery for the Arduino® UNO Q board and its peripherals. When used with the USB-C 8-in-1 Dongle, this power supply ensures stable operation of the UNO Q alongside multiple connected peripherals including displays, USB devices, and network adapters.</p>
+<p style="text-align: justify;">The Arduino USB-C Power Supply is specifically designed to provide optimal power delivery for the Arduino® UNO Q board and its peripherals. When used with the USB-C 8-in-1 Dongle, this power supply allows stable operation of the UNO Q alongside multiple connected peripherals including displays, USB devices, and network adapters.</p>
 
 ### Key Use Cases
 
@@ -103,7 +102,7 @@ type: maker
 | UNO Q + Dongle + Multiple Peripherals| 5.0 V / 3.0 A           | 15 W                |
 
 <div style="background-color: rgba(255, 193, 7, 0.2); border-left: 6px solid rgba(255, 152, 0, 1); margin: 20px 0; padding: 15px;">
-  <strong>Important:</strong> When using the USB-C 8-in-1 Dongle with multiple high-power peripherals, ensure the power supply is connected to the dongle's PD port (not directly to the UNO Q). The dongle will pass through power to the UNO Q while simultaneously powering connected peripherals.
+  <strong>Important:</strong> When using the USB-C 8-in-1 Dongle with multiple high-power peripherals, make sure the power supply is connected to the dongle's PD port (not directly to the UNO Q). The dongle will pass through power to the UNO Q while simultaneously powering connected peripherals.
 </div>
 
 ### Connection Diagram
@@ -159,12 +158,12 @@ type: maker
 
 ### Protection Features
 
-| **Protection Type**         | **Specification**                                                 |
-|-----------------------------|-------------------------------------------------------------------|
-| Over Current Protection     | 105% - 150% of maximum load; auto-recovery hiccup mode            |
-| Short Circuit Protection    | Output automatically shuts down; auto-recovery when fault removed |
-| Over Voltage Protection     | Hiccup protection mode; auto-recovery when fault removed          |
-| Over Temperature Protection | Thermal shutdown with auto-recovery                               |
+| **Protection Type**         | **Specification**                                                  |
+|-----------------------------|--------------------------------------------------------------------|
+| Over Current Protection     | 105% - 150% of maximum load / auto-recovery hiccup mode            |
+| Short Circuit Protection    | Output automatically shuts down / auto-recovery when fault removed |
+| Over Voltage Protection     | Hiccup protection mode / auto-recovery when fault removed          |
+| Over Temperature Protection | Thermal shutdown with auto-recovery                                |
 
 <div style="page-break-after: always;"></div>
 
@@ -207,18 +206,14 @@ type: maker
 
 ### Dimensions
 
-<p style="text-align: justify;">The power supply features a compact cubic form factor suitable for travel and portable use. The interchangeable plug design allows use in multiple regions without adapters.</p>
+<p style="text-align: justify;">The power supply features a compact cubic form factor suitable for travel and portable use. The interchangeable plug design allows use in multiple regions without adapters as listed in [this section](#regional-plug-options).</p>
 
 ![Power Supply Dimensions](assets/mechanical_drawing_power_supply.png)
 
-| **Component**      | **Dimensions**        |
-|--------------------|-----------------------|
-| Main Body          | 64 × 64 × 30 mm       |
-| EU Plug            | 24.1 × 19.0 × 8.15 mm |
-| UK Plug            | 20.0 × 48.98 × 8.7 mm |
-| US Plug            | 18.4 × 27.5 × 8.15 mm |
-| AU Plug            | 20.0 × 28.0 × 8.7 mm  |
-| Weight (with plug) | ~90 g                 |
+| **Configuration**           | **Dimensions (W × L × H)**   |
+|-----------------------------|------------------------------|
+| With US plug folded         | 64 × 64 × 30 mm              |
+| With US plug unfolded       | 64 × 80.06 × 30 mm           |
 
 ### Package Contents
 
@@ -245,19 +240,12 @@ type: maker
 
 ### Mechanical Stress Tests
 
-#### Vibration Test
-
-- **Frequency Range:** 10 - 300 Hz sweep
-- **Acceleration:** 1.0 G constant (3.5 mm displacement)
-- **Duration:** 1 hour per axis (X, Y, Z)
-- **Criteria:** No visible damage, normal operation after test
-
-#### Drop Test
-
-- **Surfaces:** 6 faces
-- **Height:** 1 meter
-- **Surface:** Concrete
-- **Criteria:** Plugs may bend, housing may scratch, but no structural damage; normal operation after test
+| **Test Type**      | **Specification**                                                                          |
+|--------------------|--------------------------------------------------------------------------------------------|
+| Vibration Test     | 10 - 300 Hz sweep, 1.0 G constant (3.5 mm displacement), 1 hour per axis (X, Y, Z)         |
+| Vibration Criteria | No visible damage, normal operation after test                                             |
+| Drop Test          | 6 faces, 1 meter height onto concrete surface                                              |
+| Drop Criteria      | Plugs may bend, housing may scratch, but no structural damage. Normal operation after test |
 
 ### Environmental Compliance
 
@@ -277,16 +265,16 @@ type: maker
 
 The Arduino USB-C Power Supply holds the following safety certifications:
 
-| **Certification** | **Region**      | **Standard**              | 
-|-------------------|-----------------|---------------------------|
-| UL/CUL            | USA/Canada      | UL62368-1, CSA C22.2      |
-| ETL               | USA             | UL62368                   |
-| TUV/GS            | Europe          | EN62368                   |
-| CE                | Europe          | EN62368                   |
-| UKCA              | United Kingdom  | EN62368                   |
-| FCC               | USA             | Part 15 Class B           |
-| SAA               | Australia       | AS/NZS 62368              |
-| C-TICK            | Australia       | AS/NZS CISPR32:2015       |
+| **Certification** | **Region**     | **Standard**         |
+|-------------------|----------------|----------------------|
+| UL/CUL            | USA/Canada     | UL62368-1, CSA C22.2 |
+| ETL               | USA            | UL62368              |
+| TUV/GS            | Europe         | EN62368              |
+| CE                | Europe         | EN62368              |
+| UKCA              | United Kingdom | EN62368              |
+| FCC               | USA            | Part 15 Class B      |
+| SAA               | Australia      | AS/NZS 62368         |
+| C-TICK            | Australia      | AS/NZS CISPR32:2015  |
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
   <strong>Note:</strong> All certifications are maintained and updated regularly. For the most current certification status, please contact Arduino support or refer to product documentation.
@@ -347,7 +335,7 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 # Reference Documentation
 
-| No. | Reference                   | Link                                                                                |
+| No. | Reference                   | Link                                                                               |
 |:---:|-----------------------------|------------------------------------------------------------------------------------|
 |  1  | Arduino UNO Q Documentation | [https://docs.arduino.cc/hardware/uno-q/](https://docs.arduino.cc/hardware/uno-q/) |
 |  2  | Arduino Store               | [https://store.arduino.cc/](https://store.arduino.cc/)                             |
