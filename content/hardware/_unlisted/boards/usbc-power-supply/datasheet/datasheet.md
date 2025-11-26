@@ -8,7 +8,7 @@ type: maker
 
 # Description
 
-<p style="text-align: justify;">The Arduino® USB-C Power Supply (45W) (TPX00242) is a compact, interchangeable plug adapter designed for use with the Arduino® UNO Q and other USB-C devices supporting USB Power Delivery (PD). The 45 W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5 V, 9 V, 12 V, 15 V, 20 V), negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.</p>
+<p style="text-align: justify;">The Arduino® USB-C Power Supply (45W) (TPX00242) is a compact, interchangeable plug adapter designed for use with USB-C devices supporting USB Power Delivery (PD). The 45 W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5 V, 9 V, 12 V, 15 V, 20 V), negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US, AU) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -82,32 +82,24 @@ type: maker
 
 <div style="page-break-after: always;"></div>
 
-## Usage with Arduino® UNO Q
+## Usage
 
-<p style="text-align: justify;">The Arduino USB-C Power Supply is specifically designed to provide optimal power delivery for the Arduino® UNO Q board and its peripherals. When used with the USB-C 8-in-1 Dongle, this power supply allows stable operation of the UNO Q alongside multiple connected peripherals including displays, USB devices, and network adapters.</p>
+<p style="text-align: justify;">The Arduino USB-C Power Supply provides optimal power delivery for USB-C devices and their peripherals. When used with USB-C hubs or dongles, this power supply allows stable operation of connected devices alongside multiple peripherals including displays, USB devices, and network adapters.</p>
 
 ### Key Use Cases
 
-- **UNO Q Power Supply:** Direct connection to UNO Q USB-C port for development and operation
-- **Dongle Power Delivery:** Powers the USB-C 8-in-1 Dongle with sufficient headroom for multiple peripherals
-- **Fast Charging:** Charges UNO Q and other USB-C devices with intelligent power negotiation
-- **Multi-Device Support:** Compatible with smartphones, tablets, laptops, and other USB-C devices
-
-### Recommended Power Profiles for UNO Q
-
-| **Configuration**                    | **Recommended Profile** | **Power Delivered** |
-|--------------------------------------|-------------------------|---------------------|
-| UNO Q standalone                     | 5.0 V / 3.0 A           | 15 W                |
-| UNO Q + USB-C Dongle (light load)    | 5.0 V / 3.0 A           | 15 W                |
-| UNO Q + Dongle + Multiple Peripherals| 5.0 V / 3.0 A           | 15 W                |
+- **Direct Device Power:** Direct connection to USB-C devices for development and operation
+- **Hub/Dongle Power Delivery:** Powers USB-C hubs and dongles with sufficient headroom for multiple peripherals
+- **Fast Charging:** Charges USB-C devices with intelligent power negotiation
+- **Multi-Device Support:** Compatible with single-board computers, smartphones, tablets, laptops, and other USB-C devices
 
 <div style="background-color: rgba(255, 193, 7, 0.2); border-left: 6px solid rgba(255, 152, 0, 1); margin: 20px 0; padding: 15px;">
-  <strong>Important:</strong> When using the USB-C 8-in-1 Dongle with multiple high-power peripherals, make sure the power supply is connected to the dongle's PD port (not directly to the UNO Q). The dongle will pass through power to the UNO Q while simultaneously powering connected peripherals.
+  <strong>Important:</strong> When powering USB-C hubs or dongles with multiple high-power peripherals, connect this power supply to the hub's PD input port. The hub will distribute power to the connected device and peripherals simultaneously. Ensure the total power consumption does not exceed 45 W.
 </div>
 
-### Connection Diagram
+### Connection Method
 
-<p style="text-align: justify;">For standalone UNO Q operation, connect the power supply's USB-C output directly to the UNO Q's USB-C port. For expanded I/O with the USB-C Dongle, connect the power supply to the dongle's USB-C PD port, then connect the dongle to the UNO Q.</p>
+<p style="text-align: justify;">For standalone device operation, connect the power supply's USB-C output directly to your device's USB-C port. For expanded I/O with USB-C hubs or dongles, connect the power supply to the hub's USB-C PD port, then connect the hub to your device.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -335,10 +327,9 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 # Reference Documentation
 
-| No. | Reference                   | Link                                                                               |
-|:---:|-----------------------------|------------------------------------------------------------------------------------|
-|  1  | Arduino UNO Q Documentation | [https://docs.arduino.cc/hardware/uno-q/](https://docs.arduino.cc/hardware/uno-q/) |
-|  2  | Arduino Store               | [https://store.arduino.cc/](https://store.arduino.cc/)                             |
+| No. | Reference     | Link                                                       |
+|:---:|---------------|------------------------------------------------------------|
+|  1  | Arduino Store | [https://store.arduino.cc/](https://store.arduino.cc/)     |
 
 # Document Revision History
 
