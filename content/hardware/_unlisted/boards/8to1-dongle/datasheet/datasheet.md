@@ -1,14 +1,14 @@
 ---
 identifier: TPX00241
-title: USB Type-C 8-in-1 Dongle
+title: Arduino® USB-C Hub (8 in 1)
 type: maker
 ---
 
-![USB Type-C 8-in-1 Dongle](assets/featured.png)
+![USB-C Hub (8 in 1)](assets/featured.png)
 
 # Description
 
-<p style="text-align: justify;">The Arduino® USB-C Hub (8 in 1) (TPX00241) is a compact multiport adapter designed for use with the Arduino® UNO Q and other USB-C devices. This dongle expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides essential I/O expansion for development, prototyping, and deployment scenarios.</p>
+<p style="text-align: justify;">The Arduino® USB-C Hub (8 in 1) (TPX00241) is a compact multiport adapter designed for use with USB-C devices. This hub expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides essential I/O expansion for development, prototyping, and deployment scenarios.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -18,7 +18,7 @@ type: maker
 
 ### General Specifications
 
-![USB Type-C 8-in-1 Top/Bottom Views](assets/dongle_views.png)
+![USB-C Hub (8 in 1) Top/Bottom Views](assets/dongle_views.png)
 
 | **Feature**  | **Specification**                      |
 |--------------|----------------------------------------|
@@ -32,7 +32,7 @@ type: maker
 
 ### Port Configuration
 
-![USB Type-C 8-in-1 Dongle Ports](assets/dongle_ports.png)
+![USB-C Hub (8 in 1) Hub Ports](assets/dongle_ports.png)
 
 | **Port Type**                 | **Quantity** | **Specification**                                  |
 |-------------------------------|--------------|----------------------------------------------------|
@@ -61,14 +61,14 @@ type: maker
 | Linux      | Supported            |
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
-  <strong>Note:</strong> This dongle is plug-and-play compatible with most operating systems. No additional drivers are required for basic functionality.
+  <strong>Note:</strong> This Hub is plug-and-play compatible with most operating systems. No additional drivers are required for basic functionality.
 </div>
 
 <div style="page-break-after: always;"></div>
 
-## Usage with Arduino® UNO Q
+## Usage
 
-<p style="text-align: justify;">The USB Type-C 8-in-1 Dongle is designed to expand the connectivity of the Arduino® UNO Q, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with the UNO Q in Single-Board Computer (SBC) mode, this dongle enables a full desktop computing experience.</p>
+<p style="text-align: justify;">The USB-C Hub (8 in 1) expands the connectivity of USB-C devices, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with single-board computers in desktop mode, this hub enables a full computing experience with multiple peripherals connected simultaneously.</p>
 
 ### Key Use Cases
 
@@ -79,16 +79,8 @@ type: maker
 - **Power Delivery:** Supply power to the UNO Q while simultaneously using other ports (65 W PD)
 
 <div style="background-color: rgba(255, 193, 7, 0.2); border-left: 6px solid rgba(255, 152, 0, 1); margin: 20px 0; padding: 15px;">
-  <strong>Important:</strong> The dongle requires external power delivery through the USB-C PD port. Ensure your power supply provides at least 5 V / 3 A (15 W minimum) for stable operation of the UNO Q and connected peripherals. For maximum performance with multiple high-power devices, a 65 W PD charger is recommended.
+  <strong>Important:</strong> The hub requires external power delivery through the USB-C PD port. Ensure your power supply provides at least 5 V / 3 A (15 W minimum) for stable operation of connected devices and peripherals. For maximum performance with multiple high-power devices, a 65 W PD charger is recommended.
 </div>
-
-### Connection Diagram
-
-<p style="text-align: justify;">Connect the dongle's USB-C male connector to the UNO Q's USB-C port. Attach the external power supply to the dongle's USB-C PD port. Once powered, the connected peripherals will be automatically detected by the operating system.</p>
-
-![USB Type-C 8-in-1 Dongle with UNO Q](assets/dongle_unoq.png)
-
-<div style="page-break-after: always;"></div>
 
 ## Technical Specifications
 
@@ -131,7 +123,7 @@ type: maker
 | Maximum Power    | 65 W                         |
 | Output to Device | Pass-through                 |
 
-<p style="text-align: justify;">The USB-C PD port supports USB Power Delivery negotiation up to 65 W. The actual power delivered to the connected device (e.g., UNO Q) depends on the power supply capability and the device's power requirements. When multiple peripherals are connected, ensure the power supply can handle the combined load.</p>
+<p style="text-align: justify;">The USB-C PD port supports USB Power Delivery negotiation up to 65 W. The actual power delivered to the connected device depends on the power supply capability and the device's power requirements. When multiple peripherals are connected, ensure the power supply can handle the combined load.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -139,9 +131,9 @@ type: maker
 
 ### Dimensions
 
-<p style="text-align: justify;">The dongle features a compact form factor suitable for portable use alongside the Arduino® UNO Q. The attached cable provides flexibility for connection without blocking adjacent ports.</p>
+<p style="text-align: justify;">The hub features a compact form factor suitable for portable use with various devices. The attached cable provides flexibility for connection without blocking adjacent ports.</p>
 
-![Dongle Dimensions](assets/mechanical_drawing_dongle.png)
+![Hub Dimensions](assets/mechanical_drawing_dongle.png)
 
 | **Dimension** | **Measurement** |
 |---------------|-----------------|
@@ -153,7 +145,7 @@ type: maker
 
 ### Package Contents
 
-- 1× USB Type-C 8-in-1 Dongle
+- 1× Arduino® USB-C Hub (8 in 1)
 
 <div style="page-break-after: always;"></div>
 
