@@ -20,15 +20,16 @@ type: maker
 
 ![USB-C Hub (8 in 1) Top/Bottom Views](assets/dongle_views.png)
 
-| **Feature**  | **Specification**                      |
-|--------------|----------------------------------------|
-| Model Number | TPX00241                               |
-| Manufacturer | Lanyue Electronics (Shenzhen) Co., Ltd |
-| Color        | Black                                  |
-| Chipset      | CS5266BN + CS7222 + GL823K + RTL8152B  |
-| Cable Length | 175 mm                                 |
-| Dimensions   | 119 × 27.8 × 16 mm                     |
-| Weight       | 60 g                                   |
+| **Feature**        | **Specification**                      |
+|--------------------|----------------------------------------|
+| Model Number       | TPX00241                               |
+| Manufacturer Model | OS1030004                              |
+| Manufacturer       | Lanyue Electronics (Shenzhen) Co., Ltd |
+| Color              | Black                                  |
+| Chipset            | CS5266BN + CS7222 + GL823K + RTL8152B  |
+| Cable Length       | 175 mm                                 |
+| Dimensions         | 119 × 27.8 × 16 mm                     |
+| Weight             | 60 g                                   |
 
 ### Port Configuration
 
