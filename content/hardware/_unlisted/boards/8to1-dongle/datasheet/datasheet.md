@@ -8,7 +8,7 @@ type: maker
 
 # Description
 
-<p style="text-align: justify;">The Arduino® USB-C Hub (8 in 1) (TPX00241) is a compact multiport adapter designed for use with USB-C devices. This hub expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides essential I/O expansion for development, prototyping, and deployment scenarios.</p>
+<p style="text-align: justify;">The Arduino® USB-C Hub (8 in 1) (TPX00241) is a compact multiport adapter designed for use with USB-C devices. This hub expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides I/O expansion for development, prototyping, and deployment scenarios.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -68,7 +68,7 @@ type: maker
 
 ## Usage
 
-<p style="text-align: justify;">The USB-C Hub (8 in 1) expands the connectivity of USB-C devices, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with single-board computers in desktop mode, this hub enables a full computing experience with multiple peripherals connected simultaneously.</p>
+<p style="text-align: justify;">The USB-C Hub (8 in 1) expands the connectivity of USB-C devices, providing access to external displays, network connectivity, additional USB peripherals, and storage devices. When used with single-board computers in desktop mode, this hub allows connection of multiple peripherals simultaneously.</p>
 
 ### Key Use Cases
 
@@ -76,7 +76,7 @@ type: maker
 - **Network Connectivity:** Wired Ethernet connection via RJ45 port (100 Mbps)
 - **USB Peripherals:** Attach keyboards, mice, USB drives, cameras, and other USB devices
 - **Storage Expansion:** Read and write SD/TF cards for data logging and file transfer
-- **Power Delivery:** Supply power to the UNO Q while simultaneously using other ports (65 W PD)
+- **Power Delivery:** Supply power to connected devices while simultaneously using other ports (65 W PD)
 
 <div style="background-color: rgba(255, 193, 7, 0.2); border-left: 6px solid rgba(255, 152, 0, 1); margin: 20px 0; padding: 15px;">
   <strong>Important:</strong> The hub requires external power delivery through the USB-C PD port. Ensure your power supply provides at least 5 V / 3 A (15 W minimum) for stable operation of connected devices and peripherals. For maximum performance with multiple high-power devices, a 65 W PD charger is recommended.
@@ -149,15 +149,15 @@ type: maker
 
 <div style="page-break-after: always;"></div>
 
-# Certifications
+## Certifications
 
-## Declaration of Conformity CE DoC (EU)
+### Declaration of Conformity CE DoC (EU)
 
 English: We declare under our sole responsibility that the products above are in conformity with the essential requirements of the following EU Directives and therefore qualify for free movement within markets comprising the European Union (EU) and European Economic Area (EEA).
 
 French: Nous déclarons sous notre seule responsabilité que les produits indiqués ci-dessus sont conformes aux exigences essentielles des directives de l'Union européenne mentionnées ci-après, et qu'ils remplissent à ce titre les conditions permettant la libre circulation sur les marchés de l'Union européenne (UE) et de l'Espace économique européen (EEE).
 
-## Declaration of Conformity to EU RoHS & REACH
+### Declaration of Conformity to EU RoHS & REACH
 
 <p style="text-align: justify;">Arduino boards and accessories are in compliance with Directive 2011/65/EU of the European Parliament and Directive 2015/863/EU of the Council of 4 June 2015 on the restriction of the use of certain hazardous substances in electrical and electronic equipment.</p>
 
@@ -178,7 +178,7 @@ Exemptions: No exemptions are claimed.
 
 <p style="text-align: justify;">Arduino products are fully compliant with the related requirements of European Union Regulation (EC) 1907/2006 concerning the Registration, Evaluation, Authorization and Restriction of Chemicals (REACH). We declare none of the SVHCs (https://echa.europa.eu/web/guest/candidate-list-table), the Candidate List of Substances of Very High Concern for authorization currently released by ECHA, is present in all products (and also package) in quantities totaling in a concentration equal or above 0.1%. To the best of our knowledge, we also declare that our products do not contain any of the substances listed on the "Authorization List" (Annex XIV of the REACH regulations) and Substances of Very High Concern (SVHC) in any significant amounts as specified by the Annex XVII of Candidate list published by ECHA (European Chemical Agency) 1907/2006/EC.</p>
 
-## Conflict Minerals Declaration
+### Conflict Minerals Declaration
 
 <p style="text-align: justify;">As a global supplier of electronic and electrical components, Arduino is aware of our obligations with regards to laws and regulations regarding Conflict Minerals, specifically the Dodd-Frank Wall Street Reform and Consumer Protection Act, Section 1502. Arduino does not directly source or process conflict minerals such as Tin, Tantalum, Tungsten, or Gold. Conflict minerals are contained in our products in the form of solder, or as a component in metal alloys. As part of our reasonable due diligence Arduino has contacted component suppliers within our supply chain to verify their continued compliance with the regulations. Based on the information received thus far we declare that our products contain Conflict Minerals sourced from conflict-free areas.</p>
 
@@ -198,19 +198,19 @@ This device complies with part 15 of the FCC Rules. Operation is subject to the 
 
 This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment.
 
-# Company Information
+## Company Information
 
 | Company name    | Arduino S.r.l.                             |
 |-----------------|--------------------------------------------|
 | Company address | Via Andrea Appiani 25, 20900 Monza (Italy) |
 
-# Reference Documentation
+## Reference Documentation
 
 | No. | Reference     | Link                                                   |
 |:---:|---------------|--------------------------------------------------------|
-|  2  | Arduino Store | [https://store.arduino.cc/](https://store.arduino.cc/) |
+|  1  | Arduino Store | [https://store.arduino.cc/](https://store.arduino.cc/) |
 
-# Document Revision History
+## Document Revision History
 
 |  **Date**  | **Revision** | **Changes**   |
 |:----------:|:------------:|---------------|
