@@ -24,16 +24,12 @@ Power Delivery:
   USB PD 3.0: Supported
   PPS: Supported
 Protection:
-  Over Current: Auto-recovery
-  Short Circuit: Auto-recovery
-  Over Voltage: Auto-recovery
-  Over Temperature: Auto-recovery
+  Types: Over Current, Short Circuit, Over Voltage, Over Temperature
 Operating Conditions:
   Operating Temperature: 0 °C - 35 °C
   Storage Temperature: -40 °C - 70 °C
   Operating Humidity: 10% - 90% RH (non-condensing)
   Storage Humidity: 5% - 95% RH (non-condensing)
-  Operating Altitude: Up to 5000 m
 Safety:
   Dielectric Strength: 3000 V AC @ 50 Hz
   Leakage Current: 0.25 mA maximum @ 230 V AC
