@@ -7,18 +7,18 @@ The **Arduino® USB-C Cable (Full 24-pin)** features all 24 pins connected on bo
 <FeatureList>
 
   <Feature title="Data Transfer" image="usb">
-    USB 3.0 (up to 5 Gbps) with USB 2.0 backward compatibility (480 Mbps).
+    USB 3.0 (USB 3.1 Gen 1) data transfer at 5 Gbps.
   </Feature>
 
   <Feature title="Video Output" image="display">
-    DisplayPort Alt Mode over USB-C.
+    Supports DisplayPort Alt Mode over USB-C.
   </Feature>
 
   <Feature title="Power Delivery" image="power">
-    Up to 60 W (20 V / 3 A) via USB Power Delivery.
+    Supports USB Power Delivery up to 60 W.
   </Feature>
 
-  <Feature title="Durable Construction" image="manufacturing">
+  <Feature title="Durable Construction" image="industry">
     Braided cable with aluminum foil and woven shielding. Nickel-plated connectors.
   </Feature>
 
