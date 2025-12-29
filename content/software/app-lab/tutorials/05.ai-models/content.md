@@ -71,8 +71,6 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 ## Creating your Custom AI Model
 
-### Image Based Models
-
 - In your custom App, navigate to your Brick in the left Arduino App Lab menu, "Object Detection" in this case, and select the **AI Models** tab. 
 
 ![Image here]()
@@ -83,10 +81,42 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 ![Image here]()
 
-- Your same Arduino account will be valid to log in into the Edge Impulse Studio
+- Your same Arduino account will be valid to log in into the Edge Impulse Studio. After loging in, you will be asked for consent to connect to Edge Impulse Studio.
 
+![Image here]()
 
+- With your Arduino account and Edge Impulse now connected, click on **Start to Train your AI Model** button.
+
+![Image here]()
+
+- Now, you should be redirected to the Edge Impulse Studio and asked for your model type for a guided tutorial or simply creating one from scratch.
+
+![Image here]()
+
+### Image Based Models
 
 ### Audio Based Models
 
-Here explaning the workflow from the Hey Arduino Example in Arduino App Lab
+## Custom AI Model Usage
+
+Once you come back from Edge Impulse Studio to the Arduino App Lab, your new model will appear in your Brick available models list. 
+
+![Image here]()
+
+To use it in your App, click on the **Install** button and wait for it to be built and installed in your Arduino UNO Q.
+
+![Image here]()
+
+Finally, you can simply select your new model and run your App. 
+
+![GIF here]()
+
+Now you are detecting dogs or cats with your UNO Q.
+
+## Machine Learning Models Best Practices
+
+### Vision Models
+
+### Audio Models
+
+## Troubleshooting
