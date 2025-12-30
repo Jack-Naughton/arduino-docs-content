@@ -314,6 +314,8 @@ The Nesso N1 uses two PI4IOE5V6408 I/O expanders (addresses `0x43` and `0x44`) t
 | `LCD_BACKLIGHT`       | E1.P6         | LCD Backlight Control            |
 | `LED_BUILTIN`         | E1.P7         | Onboard Status LED (Green)       |
 
+***Because expander E1 already occupies I2C address `0x44`, any external device that also uses `0x44` cannot share the bus. The Modulino Thermo module uses address `0x44`, so it is not compatible with the Nesso N1 when connected through the Qwiic connector.***
+
 
 The configuration of a digital pin is done in the `setup()` function with the `pinMode()` function:
 
@@ -522,7 +524,7 @@ The Nesso N1 has a multi-function button for power control:
 - **Click (from off state)**: Power on.
 - **Click (from on state)**: Reset the device.
 - **Double-click (from on state)**: Power off.
-- **Press and hold (from on state)**: Enter Download/Bootloader mode.
+- **Long press**: Enter Download/Bootloader mode (works both when the device is on or off).
 
 ![Power Button](assets/power-button.png)
 
@@ -1413,7 +1415,9 @@ The Qwiic system’s key advantages include:
 
 ***The Qwiic connector on the Nesso N1 is connected to the primary I2C bus, which uses the standard `Wire` object. The connector provides a 3.3 V supply, making it ideal for modern sensors.***
 
-The Qwiic connector allows you to interface with our Modulino family for developing soldering-free projects.
+***__Important:__ The Modulino Thermo module cannot be used with the Nesso N1 Qwiic connector because both the module and an internal I/O expander use I2C address `0x44`.***
+
+The Qwiic connector allows you to interface with our Modulino family for solder-free project development, except for the Modulino Thermo module on the Qwiic port.
 
 ![Modulino nodes](assets/modulino.png)
 
