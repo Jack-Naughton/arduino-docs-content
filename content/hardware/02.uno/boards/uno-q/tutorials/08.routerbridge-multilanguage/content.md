@@ -48,7 +48,7 @@ Additionally, the router handles service discovery by maintaining a directory of
 
 ![Arduino Router Architecture](assets/routerbridge-architecture.png)
 
-When a client wants to communicate, it connects to the router's Unix socket at `/var/run/arduino-router.sock`. Clients register the functions they want to expose. When another client calls those functions, the router forwards the messages back and forth, handling message ID remapping to prevent conflicts between different clients.
+When a client wants to communicate, it connects to the router is Unix socket at `/var/run/arduino-router.sock`. Clients register the functions they want to expose. When another client calls those functions, the router forwards the messages back and forth, handling message ID remapping to prevent conflicts between different clients.
 
 ### Managing the Router Service
 
@@ -59,6 +59,8 @@ Check if the router is running and view its status:
 ```bash
 systemctl status arduino-router
 ```
+
+![Managing Router Service (1)](assets/router-service-1.png)
 
 Restart the service if communication seems stuck:
 
@@ -72,13 +74,19 @@ View real-time logs to debug issues:
 journalctl -u arduino-router -f
 ```
 
+![Managing Router Service (2)](assets/router-service-2.png)
+
 For more detailed debugging information, you can enable verbose logging. Edit the service configuration:
 
 ```bash
 sudo nano /etc/systemd/system/arduino-router.service
 ```
 
-Add `--verbose` to the end of the `ExecStart` line, then reload and restart:
+Add `--verbose` to the end of the `ExecStart` line:
+
+![Managing Router Service (3)](assets/router-service-3.png)
+
+Then, reload and restart:
 
 ```bash
 sudo systemctl daemon-reload
@@ -91,6 +99,8 @@ sudo systemctl restart arduino-router
 ```bash
 journalctl -u arduino-router -f
 ```
+
+![Managing Router Service (4)](assets/router-service-4.png)
 
 ## MessagePack RPC Protocol
 
@@ -146,7 +156,7 @@ Your application connects to the Unix domain socket at `/var/run/arduino-router.
 
 ## C++ Implementation
 
-Let's build a C++ client that handles socket management, MessagePack encoding, and response tracking. It will give you a clean API for making RPC calls without worrying about the low-level details.
+Let is build a C++ client that handles socket management, MessagePack encoding, and response tracking. It will give you a clean API for making RPC calls without worrying about the low-level details.
 
 ### Installation
 
@@ -159,6 +169,8 @@ sudo apt-get update
 ```bash
 sudo apt-get install libmsgpack-dev
 ```
+
+![MessagePack library](assets/msgpack-service-1.png)
 
 ### C++ Bridge Class
 
@@ -370,7 +382,7 @@ To track which responses match which requests, the class uses a message counter 
 
 ### Example: LED Blink
 
-Here's a simple example that blinks an LED by sending commands to the MCU. Create `blink_example.cpp`:
+Here is a simple example that blinks an LED by sending commands to the MCU. Create `blink_example.cpp`:
 
 ```cpp
 #include "arduino_bridge.hpp"
@@ -550,7 +562,8 @@ int main() {
 }
 ```
 
-MCU sketch:
+The sketch for the MCU side is as follows:
+
 ```cpp
 #include "Arduino_RouterBridge.h"
 
@@ -708,7 +721,7 @@ Python's MessagePack unpacker automatically handles partial messages, so you can
 
 ### Python Example
 
-Here's a simple example using the Python bridge:
+Here is a simple example using the Python bridge:
 
 ```python
 from arduino_bridge import ArduinoBridge
@@ -745,17 +758,19 @@ This example first blinks an LED ten times using `notify()`, then reads a sensor
 
 ## Troubleshooting
 
-When working with the `arduino-router`, you may encounter some common issues. Here's how to diagnose and fix them.
+When working with the `arduino-router`, you may encounter some common issues. Here is how to diagnose and fix them.
 
 ### Connection Failed
 
-If you can't connect to the router, first check if it's running:
+If you can't connect to the router, first check if it is running:
 
 ```bash
 systemctl status arduino-router
 ```
 
-If it's not running, start it:
+![Router Service](assets/router-service-1.png)
+
+If it is not running, start it:
 
 ```bash
 sudo systemctl start arduino-router
@@ -773,6 +788,8 @@ Check the router logs for clues:
 journalctl -u arduino-router -n 50
 ```
 
+![Router Service Log](assets/router-service-5.png)
+
 The error `method XXX not available` means no client has registered that function. Check that your MCU sketch properly registered it and is currently running.
 
 The router may have lost connection to the MCU. Check the logs:
@@ -780,6 +797,8 @@ The router may have lost connection to the MCU. Check the logs:
 ```bash
 journalctl -u arduino-router -f
 ```
+
+![Router Service Log](assets/router-service-2.png)
 
 Restart the router if needed:
 
@@ -795,6 +814,8 @@ Enable verbose logging to see all message traffic. Edit the service configuratio
 sudo nano /etc/systemd/system/arduino-router.service
 ```
 
+![Router Service Configuration](assets/router-service-3.png)
+
 ```bash
 sudo systemctl daemon-reload
 ```
@@ -807,6 +828,8 @@ sudo systemctl restart arduino-router
 journalctl -u arduino-router -f
 ```
 
+![Router Service Configuration](assets/router-service-4.png)
+
 Test with a simple command before debugging code:
 
 ```cpp
@@ -818,6 +841,8 @@ Monitor the socket connection using `socat`:
 ```bash
 sudo apt-get install socat
 ```
+
+![Socket Connection](assets/socat-service-1.png)
 
 ```bash
 socat -v UNIX-LISTEN:/tmp/debug.sock,fork UNIX-CONNECT:/var/run/arduino-router.sock
