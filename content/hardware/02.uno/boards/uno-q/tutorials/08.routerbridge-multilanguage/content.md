@@ -156,21 +156,23 @@ Your application connects to the Unix domain socket at `/var/run/arduino-router.
 
 ## C++ Implementation
 
-Let is build a C++ client that handles socket management, MessagePack encoding, and response tracking. It will give you a clean API for making RPC calls without worrying about the low-level details.
+Let's build a C++ client that handles socket management, MessagePack encoding, and response tracking. It will give you a clean API for making RPC calls without worrying about the low-level details.
 
 ### Installation
 
-Install the MessagePack library on the UNO Q:
+Install the MessagePack C++ library on the UNO Q:
 
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 ```bash
-sudo apt-get install libmsgpack-dev
+sudo apt install libmsgpack-cxx-dev
 ```
 
 ![MessagePack library](assets/msgpack-service-1.png)
+
+The `libmsgpack-cxx-dev` package provides the C++ header-only library for MessagePack serialization. Since it's header-only, you don't need to link against any additional libraries during compilation.
 
 ### C++ Bridge Class
 
@@ -443,11 +445,16 @@ On the MCU side, `Bridge.provide()` registers the function with the router so it
 Compile and run the C++ program:
 
 ```bash
-g++ -std=c++17 blink_example.cpp -lmsgpackc -pthread -o blink_example
+g++ -std=c++17 blink_example.cpp -pthread -o blink_example
+```
+
+```bash
 ./blink_example
 ```
 
-The compilation needs the `-lmsgpackc` flag to link the MessagePack library and `-pthread` for thread support.
+![Arduino Router & C++ - Blink Example](assets/blink-cpp-example.png)
+
+The compilation needs the `-pthread` flag for thread support. Since `msgpack-cxx` is a header-only library, no additional linking flags are required.
 
 ### Example: Reading Sensor Data
 
@@ -498,6 +505,16 @@ int read_sensor() {
 ```
 
 Here we use `call()` instead of `notify()` because we need the sensor value back. The response object contains either the result or an error message. You extract the actual value using `response.result.get().as<int>()`, which converts the MessagePack data to a C++ integer. The UNO Q has a 14-bit ADC, so analog readings range from 0 to 16383.
+
+Compile and run:
+
+```bash
+g++ -std=c++17 sensor_example.cpp -pthread -o sensor_example
+```
+
+```bash
+./sensor_example
+```
 
 ### Complete Example: Temperature Monitor
 
@@ -600,6 +617,16 @@ void set_led_state(bool state) {
 
 This example combines both `call()` and `notify()` operations. It uses `call()` to get temperature readings and `notify()` to control the LED, since we don't need confirmation that the LED changed. The program logs all readings to a CSV file. It uses `flush()` to make sure data is written immediately rather than buffered. The temperature calculation assumes a TMP36 sensor, where each degree Celsius equals 10 mV and a 500 mV offset at 0°C.
 
+Compile and run:
+
+```bash
+g++ -std=c++17 temp_monitor.cpp -pthread -o temp_monitor
+```
+
+```bash
+./temp_monitor
+```
+
 ## Python Implementation
 
 If you prefer Python for your Linux applications, you can also communicate directly with the `arduino-router` without using Arduino App Lab.
@@ -607,8 +634,16 @@ If you prefer Python for your Linux applications, you can also communicate direc
 Install the MessagePack library:
 
 ```bash
-pip3 install msgpack
+pip3 install msgpack --break-system-packages
 ```
+
+Verify installation using the following command:
+
+```bash
+python3 -c "import msgpack; print(msgpack.version)"
+```
+
+![MessagePack library Version Verification](assets/msgpack-service.png)
 
 Create `arduino_bridge.py`:
 
@@ -756,13 +791,15 @@ if __name__ == "__main__":
 
 This example first blinks an LED ten times using `notify()`, then reads a sensor value using `call()`. The Python syntax is cleaner than C++ for simple tasks like this. When calling methods with arguments, Python automatically converts them to a list for the MessagePack message.
 
+![Arduino Router & Python - Blink Example](assets/blink-python-example.png)
+
 ## Troubleshooting
 
 When working with the `arduino-router`, you may encounter some common issues. Here is how to diagnose and fix them.
 
 ### Connection Failed
 
-If you can't connect to the router, first check if it is running:
+If you cannot connect to the router, first check if it is running:
 
 ```bash
 systemctl status arduino-router
@@ -839,7 +876,7 @@ bridge.notify("set_led_state", true);
 Monitor the socket connection using `socat`:
 
 ```bash
-sudo apt-get install socat
+sudo apt install socat
 ```
 
 ![Socket Connection](assets/socat-service-1.png)
@@ -867,4 +904,4 @@ For more information on related topics, please refer to:
 - [MessagePack specification](https://msgpack.org/)
 - [MessagePack RPC specification](https://github.com/msgpack-rpc/msgpack-rpc/blob/master/spec.md)
 - [UNO Q User Manual - Bridge Section](/tutorials/uno-q/user-manual#bridge---remote-procedure-call-rpc-library)
-- [Arduino Forum - UNO Q](https://forum.arduino.cc/c/official-hardware/uno-family/uno-q/222).
+- [Arduino Forum - UNO Q](https://forum.arduino.cc/c/official-hardware/uno-family/uno-q/222)
