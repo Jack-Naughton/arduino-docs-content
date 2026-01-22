@@ -12,7 +12,7 @@ difficulty: beginner
 
 Predefined models offer a powerful starting point for understanding edge AI. In this tutorial, we will extend those capabilities by engineering and deploying our own custom machine learning models. By moving to a custom workflow, we empower your Arduino App Lab applications to handle specialized tasks and unique datasets, ensuring the system is perfectly calibrated to your specific project goals.
 
-![Custom AI models](assets/thumbnail.png)
+![Custom AI models](assets/thumbnail-3.png)
 
 By training our own models, we gain precise control over classification parameters and performance metrics, ensuring the system meets the specific requirements of your deployed environment rather than relying on generic solutions.
 
@@ -33,7 +33,7 @@ By training our own models, we gain precise control over classification paramete
 ### Software Requirements
 
 - [Arduino App Lab](https://www.arduino.cc/en/software/#app-lab-section)
-- Arduino Account (also works to log in Edge Impulse Studio)
+- Arduino Account (also used for Edge Impulse Studio)
 
 ## Machine Learning
 
@@ -42,7 +42,7 @@ To set the context, we need to understand what an "AI Model" actually is.
 In the world of Traditional Programming, we write explicit rules: *If button A is pressed, turn on LED B.*
 In **Machine Learning**, we don't write rules; we provide examples. We show the computer 100 photos of a "Banana" and 100 photos of an "Apple," and the computer figures out the rules to tell them apart itself. The result of that learning process is an **AI Model**.
 
-![Image of Machine Learning](assets/)
+![Machine Learning](assets/ml.png)
 
 By creating a custom model, you are essentially creating a new "brain" file that you can swap into your Arduino App Lab Bricks to change their behavior completely.
 
@@ -50,7 +50,7 @@ By creating a custom model, you are essentially creating a new "brain" file that
 
 To create these custom models we use **Edge Impulse Studio**.
 
-![Image](assets/)
+![Image](assets/edge-impulse.png)
 
 Edge Impulse is the leading development platform for embedded machine learning. Think of it as the "lab" where we prepare our AI. It handles the entire pipeline required to build a model that can run on the UNO Q.
 
@@ -58,12 +58,13 @@ Edge Impulse is the leading development platform for embedded machine learning. 
 
 Instead of writing code to define the neural network, you use the Studio's visual interface to guide the process:
 
-![Image](assets/)
+![Image](assets/workflow.png)
 
-1.  **Data Acquisition:** This is the most critical step. You collect/import images or audio samples to Edge Impulse. You can do this using your mobile phone, your computer, or even capture data directly from the UNO Q.
-2.  **Impulse Design:** This is where you structure your "brain." You define an **Input block** (e.g., Audio or Image data), a **Processing block** (to clean up the data), and a **Learning block** (the neural network that learns the patterns).
-3.  **Training:** The Studio uses its cloud servers to crunch the numbers. It will look at your data thousands of times until it learns to recognize the keywords or objects you defined.
-4.  **Deployment:** Edge Impulse allows us to export the trained model specifically for the **Arduino UNO Q**, and it gets imported directly into our Arduino App Lab application.
+1.  **Data Acquisition:** This is the most critical step. You collect/import images or audio samples to Edge Impulse. You can do this by using your mobile phone, your computer, or even capture data directly from the UNO Q.
+2.  **Labeling:** Once your data is uploaded, you must assign a category or "label" to each sample. This step establishes the ground truth for the system, teaching it exactly which patterns correspond to which output class. Accurate and consistent labeling is essential, as it directly dictates what the model learns to recognize.
+3.  **Impulse Design:** This is where you structure your "brain." You define an **Input block** (e.g., Audio or Image data), a **Processing block** (to clean up the data), and a **Learning block** (the neural network that learns the patterns).
+4.  **Training:** The Studio uses its cloud servers to crunch the numbers. It will look at your data thousands of times until it learns to recognize the keywords or objects you defined.
+5.  **Deployment:** Edge Impulse allows us to export the trained model specifically for the **Arduino UNO Q**, and it gets imported directly into our Arduino App Lab application.
 
 When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. This file acts like a container; it holds all the logic and trained parameters needed to run it.
 
@@ -71,25 +72,25 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 - In your custom App, navigate to your Brick in the left Arduino App Lab menu, "Object Detection" in this case, and select the **AI Models** tab. 
 
-![Image here]()
+![AI Models Brick Option](assets/app-lab-1.png)
 
 - The interface lists available models for your Brick, showing only the built-in Default model if no new ones have been trained.
 
 - To start training your custom model, click on **Train new AI model**, if this is your first time, you will be guided through the Arduino account creation or log in.
 
-![Image here]()
+![Arduino Account Setup](assets/app-lab-3.png)
 
 - Your same Arduino account will be valid to log in into the Edge Impulse Studio. After loging in, you will be asked for consent to connect to Edge Impulse Studio.
 
-![Image here]()
+![Connect to Edge Impulse](assets/app-lab-5.png)
 
 - With your Arduino account and Edge Impulse now connected, click on **Start to Train your AI Model** button.
 
-![Image here]()
+![Start to Train your AI Model](assets/app-lab-6.png)
 
-- Now, you should be redirected to the Edge Impulse Studio and asked for your model type for a guided tutorial or simply creating one from scratch.
+- Now, you should be redirected to the Edge Impulse Studio and asked for your model type for a guided tutorial or simply to create one from scratch.
 
-![Image here]()
+![Edge Impulse Studio](assets/app-lab-7.png)
 
 ### Image Based Models
 
@@ -99,24 +100,23 @@ To create a machine vision model for detecting objects or classifying images, fo
 
 Create your first project by navigating to your profile picture (in the top-right corner) and clicking on **Create new project**. Select a name that resonates with your project’s objectives.
 
-![Image here]()
-
+![New Project Creation](assets/app-lab-8.png)
 
 #### Classes:
 
-Define the classes you want your model to detect (e.g., apples, bananas). Also, create a class called "unknown"
+Define the classes you want your model to detect (e.g., apple, banana). We are going to use them in the labeling process just before creating the dataset.
 
 #### Dataset:
 
 To train your model, you first need data. Start by creating a dataset of the objects you want to detect.
 
-![Image of dashboard]()
-
 From your project **Dashboard**, click on **Collect new data**. You can build your dataset using your phone, computer, or the UNO Q itself, or by uploading existing images directly.
 
-For convenience, we will use a smartphone. Scan the QR code to open the link, select the **Camera** option, and grant the necessary permissions.
+![Collecting New Data](assets/app-lab-9.png)
 
-![QR code]()
+For our convenience, we will use a smartphone. Scan the QR code to open the link, select the **Camera** option, and grant the necessary permissions.
+
+![QR code to connect your phone](assets/app-lab-10.png)
 
 Capture a variety of images for the classes you want to detect (e.g., apples and bananas). Additionally, Edge Impulse will create a class automatically called **background** to teach the model what to ignore based on your pictures.
 
