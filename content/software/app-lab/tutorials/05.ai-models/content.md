@@ -39,7 +39,6 @@ By training your own models, you gain precise control over classification parame
 
 To set the context, we need to understand what an "AI Model" actually is.
 
-In the world of Traditional Programming, we write explicit rules: *If button A is pressed, turn on LED B.*
 In the world of traditional programming, we write explicit rules: *If button A is pressed, turn on LED B.*
 In **machine learning**, we don't write rules; we provide examples. We show the computer 100 photos of a "Banana" and 100 photos of an "Apple," and the computer figures out the rules to tell them apart itself. The result of that learning process is an **AI Model**.
 
@@ -49,11 +48,11 @@ By creating a custom model, you are essentially creating a new "brain" file that
 
 ### Edge Impulse Studio
 
-To create these custom models we use **Edge Impulse Studio**.
+To create these custom models, we use **Edge Impulse Studio**.
 
 ![Edge Impulse Studio](assets/edge-impulse.png)
 
-Edge Impulse is the leading development platform for embedded machine learning. Think of it as the "lab" where we prepare our AI. It handles the entire pipeline required to build a model that can run on the UNO Q.
+Edge Impulse is the leading development platform for embedded machine learning. Think of it as a "lab" where we prepare our AI. It handles the entire pipeline required to build a model that can run on the UNO Q.
 
 #### The Workflow
 
@@ -65,9 +64,9 @@ Instead of writing code to define the neural network, you use the Studio's visua
 2.  **Labeling:** Once your data is uploaded, you must assign a category or "label" to each sample. This step establishes the ground truth for the system, teaching it exactly which patterns correspond to which output class. Accurate and consistent labeling is essential, as it directly dictates what the model learns to recognize.
 3.  **Impulse Design:** This is where you structure your "brain." You define an **Input block** (e.g., Audio or Image data), a **Processing block** (to clean up the data), and a **Learning block** (the neural network that learns the patterns).
 4.  **Training:** The Studio uses its cloud servers to crunch the numbers. It will look at your data thousands of times until it learns to recognize the keywords or objects you defined.
-5.  **Deployment:** Edge Impulse allows us to export the trained model specifically for the **Arduino UNO Q**, and it gets imported directly into our Arduino App Lab application.
+5.  **Deployment:** Edge Impulse allows us to export the trained model specifically for the **Arduino UNO Q**, and it is imported directly into our Arduino App Lab application.
 
-When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. This file acts like a container; it holds all the logic and trained parameters needed to run it.
+When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. This file acts as a container, holding all the logic and trained parameters needed to run the model.
 
 ## Creating your Custom AI Model
 
@@ -79,7 +78,7 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 - The interface lists available models for your Brick, showing only the built-in Default model if no new ones have been trained.
 
-- To start training your custom model, click on **Train new AI model**, if this is your first time, you will be guided through the Arduino account creation or log in.
+- To start training your custom model, click on **Train new AI model**. If this is your first time, you will be guided through the Arduino account creation or login process.
 
 ![Arduino account setup](assets/app-lab-3.png)
 
@@ -107,7 +106,7 @@ Create your first project by navigating to your profile picture (in the top-righ
 
 #### Classes:
 
-Define the classes you want your model to detect (e.g., apple, banana). We are going to use them in the labeling process just before creating the dataset.
+Define the classes your model should detect (e.g., apple, banana). We will use them in the labeling process just before creating the dataset.
 
 #### Dataset:
 
@@ -121,7 +120,7 @@ For our convenience, we will use a smartphone. Scan the QR code to open the link
 
 ![QR code to connect your phone](assets/app-lab-10.png)
 
-Capture a variety of images for the classes you want to detect (e.g., apples and bananas). Additionally, Edge Impulse will create a class automatically called **background** to teach the model what to ignore based on your pictures.
+Capture a variety of images for the classes you want to detect (e.g., apples and bananas). Additionally, Edge Impulse will automatically create a class called **background** to teach the model what to ignore based on your pictures.
 
 ![Apples and Bananas dataset](assets/app-lab-11.png)
 
@@ -129,7 +128,7 @@ Capture a variety of images for the classes you want to detect (e.g., apples and
 
 #### Impulse Design
 
-Create your Impulse in the **Create impulse** section, here you will define your model settings:
+Create your Impulse in the **Create impulse** section. Here you will define your model settings:
 
 ![Impulse design](assets/app-lab-12.png)
 
@@ -137,15 +136,15 @@ Create your Impulse in the **Create impulse** section, here you will define your
 - **Processing block:** Image
 - **Learning block:** Object Detection (Images)
 
-Click on **Save Impulse** and navigate to the _Image processing block_ and leave the **Color depth** parameter in `RGB`, then, click on _Save parameters_ and finally on _Generate features_.
+Click on **Save Impulse** and navigate to the _Image processing block_. Leave the **Color depth** parameter as `RGB`, then click on _Save parameters_ and finally on _Generate features_.
 
 ![Image processing block](assets/app-lab-13.gif)
 
 #### Neural Network Tuning
 
-Getting the right settings for your Neural Network is a matter of time and trial and error. Follow the steps below for this model:
+Getting the right settings for your Neural Network takes time and trial and error. Follow the steps below for this model:
 
-- Navigate to Object detection block in the left menu.
+- Navigate to the Object detection block in the left menu.
 - Change the model to **MobileNetV2 SSD FPN-Lite 320x320** by clicking on "Choose a different model".
 
 ![Available models](assets/app-lab-14.gif)
@@ -170,7 +169,7 @@ This model uses a high default learning rate of **0.15**.
 
 By default, **Data augmentation** is **disabled**.
 - If your model performs perfectly on the training data (high accuracy) but fails when you point the camera at real objects (low real-world performance), the model is "overfitting."
-- To fix this, **enable** Data augmentation. This randomly transforms your images during training, forcing the model to learn general features rather than memorizing exact pixels.
+- To fix this, **enable** Data augmentation. It randomly transforms your images during training, forcing the model to learn general features rather than memorize exact pixel values.
 
 **Check On-Device Constraints:** 
 
@@ -182,9 +181,9 @@ In our case, the default settings give us good results:
 
 ![Training graphs](assets/app-lab-16.png)
 
-You can clone the model used on this tutorial from [here](https://studio.edgeimpulse.com/public/846966/live). 
+You can clone the model used in this tutorial from [here](https://studio.edgeimpulse.com/public/846966/live). 
 
-***This is an example model with a very small dataset, it was created for demonstration purposes. You can improve it modifying it.***
+***This is an example model with a very small dataset created for demonstration purposes. You can improve it by modifying it.***
 
 #### Model Testing
 
@@ -192,7 +191,7 @@ To test your model's performance with new data, use the **Live classification** 
 
 ![Live classification](assets/app-lab-17.png)
 
-You can also test your model on your smartphone by using the same QR code we used for creating the dataset (also found in the **Deployment** section). This time tap on **Switch to classification mode**, wait for the model to be downloaded and started. Finally, go search for some apples and bananas with the camera.
+You can also test your model on your smartphone using the same QR code we used to create the dataset (also found in the **Deployment** section). This time, tap on **Switch to classification mode** and wait for the model to download and start. Finally, use the camera to search for some apples and bananas.
 
 ![Model running on phone](assets/app-lab-18.png)
 
@@ -202,17 +201,17 @@ As Edge Impulse Studio is paired with the Arduino App Lab, in the **Dashboard** 
 
 ![Placeholder-TBD](assets/app-lab-20.png)
 
-Also, you can export the Edge Impulse Model (.eim) for your UNO Q from the **Deployment** section and use it in your custom Python or C++ projects.
+You can also export the Edge Impulse Model (.eim) for your UNO Q from the **Deployment** section and use it in your custom Python or C++ projects.
 
 ![UNO Q .eim model](assets/app-lab-19.png)
 
 ## Custom AI Model Usage
 
-Once you come back from Edge Impulse Studio to the Arduino App Lab, your new model will appear in your Brick available models list. 
+Once you return from Edge Impulse Studio to Arduino App Lab, your new model will appear in your Brick's available models list. 
 
 ![Custom model selection](assets/app-lab-21.png)
 
-To use it in your App, click on the **Install** button and wait for it to be built and installed in your Arduino UNO Q. Finally, you can simply select your new model and run your App. 
+To use it in your App, click on the **Install** button and wait for it to be built and installed on your Arduino UNO Q. Finally, you can simply select your new model and run your App.
 
 ![Model installation](assets/app-lab-22.gif)
 
