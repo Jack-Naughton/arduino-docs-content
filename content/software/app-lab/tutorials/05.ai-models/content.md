@@ -10,11 +10,11 @@ difficulty: beginner
 
 ## Overview
 
-Predefined models offer a powerful starting point for understanding edge AI. In this tutorial, we will extend those capabilities by engineering and deploying our own custom machine learning models. By moving to a custom workflow, we empower your Arduino App Lab applications to handle specialized tasks and unique datasets, ensuring the system is perfectly calibrated to your specific project goals.
+Predefined models offer a powerful starting point for understanding edge AI. In this tutorial, we will extend those capabilities by engineering and deploying our own custom machine learning models. By moving to a custom workflow, we can empower our Arduino App Lab applications to handle specialized tasks and unique datasets, allowing the system to be tailored to our specific project goals.
 
 ![Custom AI models](assets/thumbnail-3.png)
 
-By training our own models, we gain precise control over classification parameters and performance metrics, ensuring the system meets the specific requirements of your deployed environment rather than relying on generic solutions.
+By training your own models, you gain precise control over classification parameters and performance metrics, ensuring the system meets the specific requirements of your deployed environment rather than relying on generic solutions.
 
 ## Goals
 
