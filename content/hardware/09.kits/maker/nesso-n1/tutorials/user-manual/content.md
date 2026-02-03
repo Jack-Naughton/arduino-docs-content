@@ -233,6 +233,12 @@ For projects where a slimmer profile is desired, the included hexagon key can be
 
 ***The Nesso N1 does not include a USB-C® cable, which is required to connect the board to your computer. A compatible cable is [available separately here](https://store.arduino.cc/products/usb-cable2in1-type-c).***
 
+### Factory Sketch
+
+If you wish to restore the Nesso N1 to its original state, or if you want to explore the code that comes preloaded on the board, you can download the source code below:
+
+- [**Nesso N1 Factory Sketch**](assets/NessoN1-Factory-Sketch.zip)
+
 ## Power Supply
 
 The Nesso N1 can be powered in three ways:
@@ -652,7 +658,7 @@ The display and touch features are easily accessed using the `Arduino_Nesso_N1` 
 
 The following example initializes the display using the `NessoDisplay` class and prints a simple text string.
 
-![Display Touch Coordinates](assets/display-example-1.png)
+![Display Text](assets/display-example-1.png)
 
 ```arduino
 #include <Arduino_Nesso_N1.h>
@@ -682,7 +688,7 @@ void loop() {
 
 NessoDisplay inherits from 'M5GFX', you can therefore draw shapes using established methods.
 
-![Display Touch Coordinates](assets/display-example-2.png)
+![Display Shapes](assets/display-example-2.png)
 
 ```arduino
 #include <Arduino_Nesso_N1.h>
@@ -1183,6 +1189,20 @@ The LoRa® module is controlled via SPI and several dedicated pins on both the E
 | `LORA_ANTENNA_SWITCH` |      | E0.P6         | LoRa® RF Antenna Switch Control  |
 | `LORA_ENABLE`         |      | E0.P7         | LoRa® Module Reset/Enable        |
 
+#### Understanding the LoRa® Antenna Control Pins
+
+The Nesso N1 includes an RF antenna switch (FM8625) and a Low Noise Amplifier (SGM1300) for the LoRa® receive path. Understanding how these work is important for reliable communication:
+
+- **`LORA_ENABLE` (EXP P7):** Controls the SX1262 module reset. Set HIGH to enable the module, LOW to reset.
+
+- **`LORA_ANTENNA_SWITCH` (EXP P6):** Powers the RF antenna switch. Must be set HIGH for normal LoRa® operation. This controls the VDD supply to the FM8625 RF switch IC.
+
+- **`LORA_LNA_ENABLE` (EXP P5):** Enables the SGM1300 Low Noise Amplifier on the receive path. **This must be set HIGH for the antenna signal to reach the SX1262 receiver.** Setting it LOW will disable the route between the antenna and the SX1262's receive input (SRFI). For power-sensitive applications, you can disable the LNA during transmit and enable it only during receive.
+
+- **Rx/Tx Switching:** The actual antenna path switching between transmit (SRFO) and receive (SRFI) is handled automatically by the SX1262's DIO2 pin when configured with `radio.setDio2AsRfSwitch(true)` in RadioLib.
+
+***Note: If two Nesso N1 devices are very close to each other, communication may appear to work even with the LNA or antenna switch disabled. This should be considered unreliable behavior and is not suitable for production use.***
+
 #### LoRa® Peer-to-Peer (P2P) Examples
 
 The following examples demonstrate basic LoRa® peer-to-peer (P2P) communication using the [RadioLib](https://github.com/jgromes/RadioLib) library. This is the foundational step for testing your hardware and building more complex network applications.
@@ -1217,12 +1237,17 @@ int packetCounter = 0;
 void setup() {
   Serial.begin(115200);
 
-  // Manually reset the LoRa module using the expander pin for reliability.
+  // Enable the SX1262 module
   pinMode(LORA_ENABLE, OUTPUT);
-  digitalWrite(LORA_ENABLE, LOW);
-  delay(10);
   digitalWrite(LORA_ENABLE, HIGH);
-  delay(10);
+
+  // Enable the LNA (required for receiving - antenna signal won't pass through if LOW)
+  pinMode(LORA_LNA_ENABLE, OUTPUT);
+  digitalWrite(LORA_LNA_ENABLE, HIGH);
+
+  // Enable the RF antenna switch power
+  pinMode(LORA_ANTENNA_SWITCH, OUTPUT);
+  digitalWrite(LORA_ANTENNA_SWITCH, HIGH);
 
   // Initialize the LoRa® module
   Serial.print(F("[SX1262] Initializing... "));
@@ -1233,6 +1258,9 @@ void setup() {
     while (true);
   }
   Serial.println(F("success!"));
+
+  // Tell the SX1262 to use its DIO2 pin to control the antenna Rx/Tx switch
+  radio.setDio2AsRfSwitch(true);
 }
 
 void loop() {
@@ -1275,14 +1303,19 @@ SX1262 radio = new Module(LORA_CS, LORA_IRQ, RADIOLIB_NC, LORA_BUSY);
 void setup() {
   Serial.begin(115200);
 
-  // Manually reset the LoRa module.
+  // Enable the SX1262 module
   pinMode(LORA_ENABLE, OUTPUT);
-  digitalWrite(LORA_ENABLE, LOW);
-  delay(10);
   digitalWrite(LORA_ENABLE, HIGH);
-  delay(10);
 
-  // Initialize the LoRa® module.
+  // Enable the LNA (required for receiving - antenna signal won't pass through if LOW)
+  pinMode(LORA_LNA_ENABLE, OUTPUT);
+  digitalWrite(LORA_LNA_ENABLE, HIGH);
+
+  // Enable the RF antenna switch power
+  pinMode(LORA_ANTENNA_SWITCH, OUTPUT);
+  digitalWrite(LORA_ANTENNA_SWITCH, HIGH);
+
+  // Initialize the LoRa® module
   Serial.print(F("[SX1262] Initializing... "));
   int state = radio.begin(LORA_FREQUENCY);
   if (state != RADIOLIB_ERR_NONE) {
@@ -1290,16 +1323,10 @@ void setup() {
     Serial.println(state);
     while (true);
   }
-
-  // Start listening for LoRa packets.
-  Serial.print(F("[SX1262] Starting to listen... "));
-  state = radio.startReceive();
-  if (state != RADIOLIB_ERR_NONE) {
-    Serial.print(F("failed, code "));
-    Serial.println(state);
-    while (true);
-  }
   Serial.println(F("success!"));
+
+  // Tell the SX1262 to use its DIO2 pin to control the antenna Rx/Tx switch
+  radio.setDio2AsRfSwitch(true);
 }
 
 void loop() {
@@ -1331,7 +1358,7 @@ void loop() {
 }
 ```
 
-***Please note: because the `LORA_ENABLE` pin is on an I/O expander, it cannot be passed directly to the RadioLib library constructor. The library must be initialized with the reset pin set to `RADIOLIB_NC` and it is best practice to perform a manual reset in setup.***
+***Please note: because the `LORA_ENABLE` pin is on an I/O expander, it cannot be passed directly to the RadioLib library constructor. The library must be initialized with the reset pin set to `RADIOLIB_NC`.***
 
 #### Configuring for Public LoRa® Networks
 
@@ -1493,7 +1520,9 @@ You can check our [Modulino family](https://store.arduino.cc/collections/modulin
 
 ### Grove Connector
 
-The Nesso N1 also includes one standard **Grove** connector. It provides a 5 V interface with two digital I/O pins (`GROVE_IO_0` on GPIO5, `GROVE_IO_1` on GPIO4), making it compatible with the extensive ecosystem of [Grove modules](https://search.arduino.cc/search?q=grove%20module&tab=store), including those from [M5Stack](https://shop.m5stack.com/pages/search-results-page?q=grove&page=1&rb_tags=ACTUATORS%7CSENSOR) and [Arduino Sensor Kit](https://store.arduino.cc/products/sensor-kit-base).
+The Nesso N1 also includes one standard **Grove** connector. It provides **5 V power** and two digital I/O pins (GROVE_IO_0 on GPIO5, GROVE_IO_1 on GPIO4) operating at **3.3 V logic**. This interface makes the board compatible with the extensive ecosystem of [Grove modules](https://search.arduino.cc/search?q=grove%20module&tab=store), including those from [M5Stack](https://shop.m5stack.com/pages/search-results-page?q=grove&page=1&rb_tags=ACTUATORS%7CSENSOR) and [Arduino Sensor Kit](https://store.arduino.cc/products/sensor-kit-base).
+
+**Important:** Do not input 5 V logic signals to these pins, as they are not 5 V tolerant.
 
 ![Grove Connector](assets/grove-connector.png)
 
