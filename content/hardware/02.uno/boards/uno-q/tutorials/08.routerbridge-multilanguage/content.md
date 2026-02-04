@@ -1,8 +1,8 @@
 ---
-title: 'Arduino-Router RPC Communication'
+title: 'Working with Arduino Router RPC'
 difficulty: advanced
 compatible-products: [uno-q]
-description: 'Learn how to communicate with the UNO Q MCU using C++, Python, and other languages via the arduino-router daemon'
+description: 'Learn how to communicate with the UNO Q MCU using C++, Python®, and other languages via the arduino-router daemon'
 tags:
   - RPC
   - C++
@@ -15,7 +15,7 @@ hardware:
 
 ## Overview
 
-While the Arduino App Lab provides a convenient Python Bridge API for communication between the Linux MPU and the Arduino MCU, you may want more control or prefer using C++, standalone Python scripts, or other languages for custom system integration.
+While the Arduino App Lab provides a convenient Python® Bridge API for communication between the Linux MPU and the Arduino MCU, you may want more control or prefer using C++, standalone Python scripts, or other languages for custom system integration.
 
 ![Arduino Router Architecture](assets/routerbridge-architecture.png)
 
@@ -26,7 +26,7 @@ This tutorial shows you how to communicate directly with the `arduino-router` da
 - Understand how the `arduino-router` daemon manages RPC communication between processors
 - Learn the MessagePack RPC protocol and message formats
 - Build RPC clients in C++ with complete working examples
-- Implement standalone Python applications that communicate with the MCU
+- Implement standalone Python® applications that communicate with the MCU
 - Debug and troubleshoot `arduino-router` communication issues
 
 ## Hardware and Software Requirements
@@ -40,7 +40,7 @@ This tutorial shows you how to communicate directly with the `arduino-router` da
 
 The `arduino-router` is a background Linux service that acts as a traffic controller for all RPC communication on the UNO Q. Instead of having direct point-to-point connections between applications, the router implements a star topology, with the router at the center and managing connections between multiple clients.
 
-This architecture provides several key advantages. Multiple Linux processes can communicate with the MCU simultaneously. For example, one Python script could read sensor data while a separate C++ application controls the motors. The router also supports Linux-to-Linux communication, allowing different services to exchange data without involving the MCU.
+This architecture provides several key advantages. Multiple Linux processes can communicate with the MCU simultaneously. For example, one Python® script could read sensor data while a separate C++ application controls the motors. The router also supports Linux-to-Linux communication, allowing different services to exchange data without involving the MCU.
 
 Additionally, the router handles service discovery by maintaining a directory of registered functions and automatically routing calls to the correct destination.
 
@@ -627,9 +627,9 @@ g++ -std=c++17 temp_monitor.cpp -pthread -o temp_monitor
 ./temp_monitor
 ```
 
-## Python Implementation
+## Python® Implementation
 
-If you prefer Python for your Linux applications, you can also communicate directly with the `arduino-router` without using Arduino App Lab.
+If you prefer Python® for your Linux applications, you can also communicate directly with the `arduino-router` without using Arduino App Lab.
 
 Install the MessagePack library:
 
@@ -746,17 +746,17 @@ class ArduinoBridge:
                 self.pending_responses[msgid]["event"].set()
 ```
 
-The Python implementation follows the same approach as the C++ version. When you call `connect()`, it opens a socket and starts a background thread to receive messages. The receive thread runs as a daemon thread, which means it will automatically stop when your program exits.
+The Python® implementation follows the same approach as the C++ version. When you call `connect()`, it opens a socket and starts a background thread to receive messages. The receive thread runs as a daemon thread, which means it will automatically stop when your program exits.
 
-The `call()` method works similarly to C++, but uses Python's Event object to wait for responses. When you call a function, it creates an event and stores it in the pending responses dictionary.
+The `call()` method works similarly to C++, but uses Python®'s Event object to wait for responses. When you call a function, it creates an event and stores it in the pending responses dictionary.
 
 The receive thread watches for incoming messages and sets the event when a matching response arrives. The `with self.lock:` blocks make sure that only one thread accesses the pending responses at a time.
 
-Python's MessagePack unpacker automatically handles partial messages, so you can feed it data as it arrives from the socket without worrying about message boundaries.
+Python®'s MessagePack unpacker automatically handles partial messages, so you can feed it data as it arrives from the socket without worrying about message boundaries.
 
-### Python Example
+### Python® Example
 
-Here is a simple example using the Python bridge:
+Here is a simple example using the Python® bridge:
 
 ```python
 from arduino_bridge import ArduinoBridge
@@ -789,9 +789,9 @@ if __name__ == "__main__":
     main()
 ```
 
-This example first blinks an LED ten times using `notify()`, then reads a sensor value using `call()`. The Python syntax is cleaner than C++ for simple tasks like this. When calling methods with arguments, Python automatically converts them to a list for the MessagePack message.
+This example first blinks an LED ten times using `notify()`, then reads a sensor value using `call()`. The Python® syntax is cleaner than C++ for simple tasks like this. When calling methods with arguments, Python automatically converts them to a list for the MessagePack message.
 
-![Arduino Router & Python - Blink Example](assets/blink-python-example.png)
+![Arduino Router & Python® - Blink Example](assets/blink-python-example.png)
 
 ## Troubleshooting
 
@@ -889,7 +889,7 @@ Then connect your app to `/tmp/debug.sock` instead to see all traffic.
 
 ## Conclusion
 
-In this tutorial, you learned how to communicate with the UNO Q MCU using custom applications in C++ and Python. You now understand how the `arduino-router` manages RPC communication, the MessagePack protocol structure, and how to build complete applications with bidirectional communication.
+In this tutorial, you learned how to communicate with the UNO Q MCU using custom applications in C++ and Python®. You now understand how the `arduino-router` manages RPC communication, the MessagePack protocol structure, and how to build complete applications with bidirectional communication.
 
 This approach opens new possibilities beyond Arduino App Lab. You can build performance critical applications, integrate with existing Linux services, create multi-process architectures, and use your preferred programming language for UNO Q projects.
 
