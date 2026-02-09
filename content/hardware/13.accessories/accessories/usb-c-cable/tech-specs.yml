@@ -1,7 +1,6 @@
 Cable:
   Name: Arduino® USB-C Cable (Full 24-pin)
   SKU: TPX00243
-  Manufacturer Model: OS1130001
 General:
   Cable Length: 1000 mm (1 m)
   Cable Diameter: Ø 4.5 ± 0.15 mm
@@ -24,4 +23,4 @@ Power Delivery:
   Maximum Power: 60 W
 Electrical:
   Conduction Impedance: 2 Ω maximum
-  Insulation Resistance: 10 MΩ minimum @ DC 300 V / 10 ms (Wire end)
+  Insulation Resistance: 10 MΩ minimum @ DC 300 V / 10 ms

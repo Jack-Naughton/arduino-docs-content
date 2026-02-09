@@ -21,8 +21,6 @@ type: maker
 | **Feature**        | **Specification**                      |
 |--------------------|----------------------------------------|
 | Model Number       | TPX00243                               |
-| Manufacturer Model | OS1130001                              |
-| Manufacturer       | Lanyue Electronics (Shenzhen) Co., Ltd |
 | Color              | Black                                  |
 | Cable Type         | Braided                                |
 | Cable Length       | 1000 mm (1 m)                          |
@@ -206,4 +204,4 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 |  **Date**  | **Revision** | **Changes**   |
 |:----------:|:------------:|---------------|
-| 26/11/2025 |      1       | First release |
+| 10/03/2025 |      1       | First release |
