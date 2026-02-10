@@ -210,4 +210,4 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 
 |  **Date**  | **Revision** | **Changes**   |
 |:----------:|:------------:|---------------|
-| 03/10/2026 |      1       | First release |
+| 10/03/2026 |      1       | First release |
