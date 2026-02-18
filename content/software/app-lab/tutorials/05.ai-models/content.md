@@ -177,13 +177,37 @@ Object Detection models like SSD are computationally heavy.
 - **Inferencing time:** Verify that the inference time is low enough for your application (e.g., <500ms for ~2 FPS).
 - **Hardware limits:** Ensure your device has enough RAM to hold the model. If you see warnings that the model is too large for your MCU, verify that your specific hardware (like the Arduino UNO Q) has the expanded memory required to run it.
 
-In our case, the default settings give us good results:
+In our case, the default settings give us good results and converged:
+
+- **Inferencing Time:** 370 ms
+- **Flash Usage:** 11 MB
 
 ![Training graphs](assets/app-lab-16.png)
 
 You can clone the model used in this tutorial from [here](https://studio.edgeimpulse.com/public/846966/live). 
 
 ***This is an example model with a very small dataset created for demonstration purposes. You can improve it by modifying it.***
+
+**Impulse Design Effect:**
+
+On the Edge Impulse project you can find another impulse design called `Impulse #2`.
+
+![New Impulse - New Settings](assets/app-lab-26.png)
+
+This one has the following settings:
+
+- **Resolution:** 96x96 pixels
+- **Neural Network architecture:** FOMO (Faster Objects, More Objects) MobileNetV2 0.35
+
+Notice that the traning result is shown as a confusion matrix and with these settings we have accomplished a very different performance:
+
+- **Inferencing Time:** 3 ms
+- **Peak RAM Usage:** 887.1 kB
+- **Flash Usage:** 102.1 kB
+
+![New performance results](assets/app-lab-25.png)
+
+***A key advantage of this model is that it uses lower-resolution input images, which significantly reduces the computational resources required for inference. Additionally, unlike traditional object detection that provides bounding boxes, FOMO is optimized to locate the center point (centroid) of detected objects.***
 
 #### Model Testing
 
@@ -221,6 +245,7 @@ Now you are detecting apples and bananas with your UNO Q.
 ## Conclusion
 
 In this tutorial, you learned how to extend the capabilities of Arduino App Lab by engineering and deploying custom AI models using Edge Impulse Studio. You explored the complete machine learning pipeline—from collecting a custom dataset of images to training a MobileNetV2 SSD object detection model optimized for the Arduino UNO Q.
+
 Thanks to the seamless integration between Arduino App Lab and Edge Impulse, you can now swap generic "models" for specialized ones, enabling your Bricks to recognize specific objects like apples and bananas with high precision. This transforms your UNO Q from a simple computer into a tailored edge AI device capable of solving unique, real-world problems.
 
 ## Next Steps
