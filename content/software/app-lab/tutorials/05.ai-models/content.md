@@ -175,7 +175,7 @@ By default, **Data augmentation** is **disabled**.
 
 Object Detection models like SSD are computationally heavy.
 - **Inferencing time:** Verify that the inference time is low enough for your application (e.g., <500ms for ~2 FPS).
-- **Hardware limits:** Ensure your device has enough RAM to hold the model. If you see warnings that the model is too large for your MCU, verify that your specific hardware (like the Arduino UNO Q) has the expanded memory required to run it.
+- **Hardware limits:** Ensure your device has enough RAM to hold the model. If you see warnings that the model is too large for your MCU, verify that your specific hardware (like the Arduino UNO Q) has the memory required to run it.
 
 In our case, the default settings give us good results and converged:
 
@@ -190,11 +190,11 @@ You can clone the model used in this tutorial from [here](https://studio.edgeimp
 
 **Impulse Design Effect:**
 
-On the Edge Impulse project you can find another impulse design called `Impulse #2`.
+In the Edge Impulse project you will find another impulse design called `Impulse #2`. We set this one up to illustrate a point.
 
 ![New Impulse - New Settings](assets/app-lab-26.png)
 
-This one has the following settings:
+This Impulse has the following settings:
 
 - **Resolution:** 96x96 pixels
 - **Neural Network architecture:** FOMO (Faster Objects, More Objects) MobileNetV2 0.35
