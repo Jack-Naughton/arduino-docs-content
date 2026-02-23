@@ -130,7 +130,7 @@ type: maker
 | Cable Length       | 1000 mm (1 m)                 |
 | Cable Diameter     | Ø 4.5 ± 0.15 mm               |
 | Cable Construction | Braided with PVC outer jacket |
-| Connector Shell    | Nickel-plated                 |
+| Connector Shell    | Metallic                      |
 | Weight             | 37 g                          |
 
 ### Package Contents

@@ -19,7 +19,7 @@ The **Arduino® USB-C Cable (Full 24-pin)** features all 24 pins connected on bo
   </Feature>
 
   <Feature title="Durable Construction" image="industry">
-    Braided cable with aluminum foil and woven shielding. Nickel-plated connectors.
+    Braided cable with aluminum foil and woven shielding. Metallic connectors.
   </Feature>
 
 </FeatureList>
