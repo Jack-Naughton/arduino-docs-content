@@ -891,7 +891,7 @@ Then connect your app to `/tmp/debug.sock` instead to see all traffic.
 
 In this tutorial, you learned how to communicate with the UNO Q MCU using custom applications in C++ and Python®. You now understand how the `arduino-router` manages RPC communication, the MessagePack protocol structure, and how to build complete applications with bidirectional communication.
 
-This approach opens new possibilities beyond Arduino App Lab. You can build performance critical applications, integrate with existing Linux services, create multi-process architectures, and use your preferred programming language for UNO Q projects.
+This approach opens new possibilities beyond Arduino App Lab. You can build performance-critical applications, integrate with existing Linux services, create multi-process architectures, and use your preferred programming language for UNO Q projects.
 
 ### Next Steps
 
