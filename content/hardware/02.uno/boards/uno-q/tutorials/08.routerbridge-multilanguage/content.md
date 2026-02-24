@@ -827,7 +827,7 @@ journalctl -u arduino-router -n 50
 
 ![Router Service Log](assets/router-service-5.png)
 
-The error `method XXX not available` means no client has registered that function. Check that your MCU sketch properly registered it and is currently running.
+The error `method XXX not available` means no client has registered that function. Check that your MCU sketch is properly registered and is currently running.
 
 The router may have lost connection to the MCU. Check the logs:
 
