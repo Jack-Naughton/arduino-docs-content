@@ -70,29 +70,61 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 ## Creating your Custom AI Model
 
-***You can open and clone the __"Detect Objects on Camera"__ example to test this tutorial.***
+- Inside the Arduino App Lab, navigate to **My Apps** and click on **Create New App**. Give it a name and save it.
+- In your App Python file, update the `main.py` script by copying and pasting this:
 
-- In your custom App, navigate to your Brick in the left Arduino App Lab menu, "Object Detection" in this case, and select the **AI Models** tab. 
+  ```python
+  from arduino.app_utils import App
+  from arduino.app_bricks.video_objectdetection import VideoObjectDetection
+
+  detection_stream = VideoObjectDetection(confidence=0.5, debounce_sec=0.0)
+
+  # Register a callback for when all objects are detected
+  def print_detections(detections: dict):
+    for key, value in detections.items():
+          for detection in value:
+              entry = {
+                  "content": key,
+                  "confidence": f"{round(detection.get('confidence', 0) * 100)} %"
+              }
+              print(entry)
+
+  detection_stream.on_detect_all(print_detections)
+
+  App.run()
+  ```
+
+- Navigate to the Bricks section in the left Arduino App Lab menu and click on the **Add Brick** button. Select the **Video Object Detection Brick**. 
+
+![Video Object Detection Brick](assets/app-lab-0.5.png)
+
+- Navigate to the **AI models** tab in the Brick. The interface lists available models for your Brick, showing only the built-in Default models if no new ones have been trained.
 
 ![AI models Brick option](assets/app-lab-1.png)
 
-- The interface lists available models for your Brick, showing only the built-in Default model if no new ones have been trained.
+- To start training your custom model, click on **Train new AI model** shown in the image above. Then, click on **Ok, let's start**.
 
-- To start training your custom model, click on **Train new AI model**. If this is your first time, you will be guided through the Arduino account creation or login process.
+![Start the Edge Impulse pairing](assets/app-lab-2.png)
 
-![Arduino account setup](assets/app-lab-3.png)
+- If this is your first time, you will be guided through the Arduino account creation or login process.
 
-- Your same Arduino account will be valid to log into the Edge Impulse Studio. After logging in, you will be asked for consent to connect to Edge Impulse Studio.
+![Login Process](assets/app-lab-3.1.png)
+
+- Your same Arduino account will be valid to log into the Edge Impulse Studio.
 
 ![Connect to Edge Impulse](assets/app-lab-5.png)
+
+- You will be asked for permision to gran Arduino App Lab to access your Edge Impulse account.
+
+![Edge Impulse permission](assets/app-lab-5.5.png)
 
 - With your Arduino account and Edge Impulse now connected, click on the **Start to Train your AI Model** button.
 
 ![Start to train your AI model](assets/app-lab-6.png)
 
-- Now, you should be redirected to the Edge Impulse Studio and asked for your model type for a guided tutorial or simply to create one from scratch.
+- Now, you should be redirected to the Edge Impulse Studio.
 
-![Edge Impulse Studio](assets/app-lab-7.png)
+![Edge Impulse Studio](assets/app-lab-7.1.png)
 
 ### Image-Based Models
 
@@ -192,7 +224,7 @@ You can clone the model used in this tutorial from [here](https://studio.edgeimp
 
 In the Edge Impulse project you will find another impulse design called `Impulse #2`. We set this one up to illustrate a point.
 
-![New Impulse - New Settings](assets/app-lab-26.png)
+![New performance results](assets/app-lab-25.png)
 
 This Impulse has the following settings:
 
@@ -204,8 +236,6 @@ Notice that the traning result is shown as a confusion matrix and with these set
 - **Inferencing Time:** 3 ms
 - **Peak RAM Usage:** 887.1 kB
 - **Flash Usage:** 102.1 kB
-
-![New performance results](assets/app-lab-25.png)
 
 ***A key advantage of this model is that it uses lower-resolution input images, which significantly reduces the computational resources required for inference. Additionally, unlike traditional object detection that provides bounding boxes, FOMO is optimized to locate the center point (centroid) of detected objects.***
 
@@ -219,27 +249,33 @@ You can also test your model on your smartphone using the same QR code we used t
 
 ![Model running on phone](assets/app-lab-18.png)
 
-#### Model Deployment
-
-As Edge Impulse Studio is paired with the Arduino App Lab, in the **Dashboard** section you will find a **Sync with Arduino App Lab** button that will import your model automatically.
-
-![Placeholder-TBD](assets/app-lab-20.png)
-
-You can also export the Edge Impulse Model (.eim) for your UNO Q from the **Deployment** section and use it in your custom Python or C++ projects.
-
-![UNO Q .eim model](assets/app-lab-19.png)
+***With your model already tested and validated. __Go back to the Arduino App Lab__.***
 
 ## Custom AI Model Usage
 
-Once you return from Edge Impulse Studio to Arduino App Lab, your new model will appear in your Brick's available models list. 
+Once you return to the Arduino App Lab, your new model will appear in your Brick's available models list. 
 
-![Custom model selection](assets/app-lab-21.png)
+![Custom model selection](assets/app-lab-21.1.png)
 
-To use it in your App, click on the **Install** button and wait for it to be built and installed on your Arduino UNO Q. Finally, you can simply select your new model and run your App.
+To use it in your App, click on the **Install** button and wait for it to be built and installed on your Arduino UNO Q.
 
-![Model installation](assets/app-lab-22.gif)
+![Model installation](assets/app-lab-22.1.png)
 
-Now you are detecting apples and bananas with your UNO Q.
+Finally, you can select your new model by clicking on your **Brick Configuration** button.
+
+![Model selection](assets/app-lab-23.1.png)
+
+### Running the App
+
+Now, run your App, and it will be using your custom AI model to detect apples and bananas.
+
+![Real image of the Setup]()
+
+***In the Python console you will see the detection logs and their confidence.***
+
+Also, you can preview your cameras live feed and see the model running in real-time by navigating to `<UNO-Q-IP-ADDRESS:4912` in your favorite browser.
+
+![Image of the Edge Impulse live feed]()
 
 
 ## Conclusion
