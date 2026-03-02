@@ -81,9 +81,9 @@ To test this feature, we will leverage the **Mobile Object Detection** example i
    ![App available in your favorite OS](assets/install-app.png)
 2. Scan the QR code with your phone's camera app.
    ![QR code scan](assets/qr-code.png)
-2. The Arduino IoT Remote app will open automatically on your phone. Log in with your Arduino account if you have not yet.
-3. Once connected, the camera feed will be visible directly on your phone and the video stream will be transmitted to the Web UI.
-4. Point your phone at objects and watch as the App detects and recognizes them.
+3. The Arduino IoT Remote app will open automatically on your phone. Log in with your Arduino account if you haven't already.
+4. Once connected, the camera feed will be visible directly on your phone and the video stream will be transmitted to the Web UI.
+5. Point your phone at objects and watch as the App detects and recognizes them.
    ![Phone's camera stream](assets/camera-stream.png)
 
 ### No QR Code Configuration (Optional)
@@ -92,7 +92,7 @@ You can also configure your phone from the IoT Remote app without scanning the Q
 
 1. Go to Devices, tap on the plus icon to set up a new device and select **Stream phone camera to UNO Q**.
    ![IoT Remote setup](assets/iot-remote.png)
-2. Select your Arduino UNO Q from the list. (It most be connected to the same network)
+2. Select your Arduino UNO Q from the list. (It must be connected to the same network)
    ![Select your UNO Q](assets/search-uno-q.png)
 3. Enter the 6 digits code below your QR code on the Web UI.
    ![Start streaming](assets/start-streaming.png)
