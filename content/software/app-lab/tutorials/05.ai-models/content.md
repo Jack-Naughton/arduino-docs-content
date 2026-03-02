@@ -12,7 +12,7 @@ difficulty: beginner
 
 Predefined models offer a powerful starting point for understanding edge AI. In this tutorial, we will extend those capabilities by engineering and deploying our own custom machine learning models. By moving to a custom workflow, we can empower our Arduino App Lab applications to handle specialized tasks and unique datasets, allowing the system to be tailored to our specific project goals.
 
-![Custom AI models](assets/thumbnail-3.png)
+![Custom AI models](assets/thumbnail-new.png)
 
 By training your own models, you gain precise control over classification parameters and performance metrics, ensuring the system meets the specific requirements of your deployed environment rather than relying on generic solutions.
 
@@ -58,9 +58,9 @@ Edge Impulse is the leading development platform for embedded machine learning. 
 
 Instead of writing code to define the neural network, you use the Studio's visual interface to guide the process:
 
-![Edge Impulse workflow](assets/workflow.png)
+![Edge Impulse workflow](assets/workflow-2.png)
 
-1.  **Data Acquisition:** This is the most critical step. You collect/import images or audio samples to Edge Impulse. You can do this by using your mobile phone, your computer, or even capture data directly from the UNO Q.
+1.  **Data Acquisition:** This is the most critical step. You collect/import images or audio samples to Edge Impulse. You can do this by using your mobile phone, your computer, or even capturing data directly from the UNO Q.
 2.  **Labeling:** Once your data is uploaded, you must assign a category or "label" to each sample. This step establishes the ground truth for the system, teaching it exactly which patterns correspond to which output class. Accurate and consistent labeling is essential, as it directly dictates what the model learns to recognize.
 3.  **Impulse Design:** This is where you structure your "brain." You define an **Input block** (e.g., Audio or Image data), a **Processing block** (to clean up the data), and a **Learning block** (the neural network that learns the patterns).
 4.  **Training:** The Studio uses its cloud servers to crunch the numbers. It will look at your data thousands of times until it learns to recognize the keywords or objects you defined.
@@ -114,7 +114,7 @@ When you export for the UNO Q, you get an **.eim (Edge Impulse Model)** file. Th
 
 ![Connect to Edge Impulse](assets/app-lab-5.png)
 
-- You will be asked for permission to gran Arduino App Lab to access your Edge Impulse account.
+- You will be asked for permission to grant Arduino App Lab to access your Edge Impulse account.
 
 ![Edge Impulse permission](assets/app-lab-5.5.png)
 
@@ -209,7 +209,7 @@ Object Detection models like SSD are computationally heavy.
 - **Inferencing time:** Verify that the inference time is low enough for your application (e.g., <500ms for ~2 FPS).
 - **Hardware limits:** Ensure your device has enough RAM to hold the model. If you see warnings that the model is too large for your MCU, verify that your specific hardware (like the Arduino UNO Q) has the memory required to run it.
 
-In our case, the default settings give us good results and converged:
+In our case, the default settings gave us good results and converged:
 
 - **Inferencing Time:** 370 ms
 - **Flash Usage:** 11 MB
@@ -249,7 +249,7 @@ You can also test your model on your smartphone using the same QR code we used t
 
 ![Model running on phone](assets/app-lab-18.png)
 
-***With your model already tested and validated. __Go back to the Arduino App Lab__.***
+***With your model already tested and validated, __go back to the Arduino App Lab__.***
 
 ## Custom AI Model Usage
 
@@ -269,14 +269,13 @@ Finally, you can select your new model by clicking on your **Brick Configuration
 
 Now, run your App, and it will be using your custom AI model to detect apples and bananas.
 
-![Real image of the Setup]()
+![Run the App](assets/final-image.png)
 
 ***In the Python console you will see the detection logs and their confidence.***
 
-Also, you can preview your cameras live feed and see the model running in real-time by navigating to `<UNO-Q-IP-ADDRESS:4912` in your favorite browser.
+Also, you can preview your cameras live feed and see the model running in real-time by navigating to `<UNO-Q-IP-ADDRESS>:4912` in your favorite browser.
 
-![Image of the Edge Impulse live feed]()
-
+![Image of the Edge Impulse live feed](assets/fruits-detector.gif)
 
 ## Conclusion
 
