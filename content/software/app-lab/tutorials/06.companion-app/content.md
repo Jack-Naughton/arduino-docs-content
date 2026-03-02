@@ -148,7 +148,7 @@ ui.on_connect(lambda sid: ui.send_message("welcome", {
 
 The frontend acts as the bridge. It receives the connection details from the backend and encodes them into a specific URL format inside a QR code. When the Arduino IoT Remote app scans this, it knows exactly where to send the video stream.
 
-Prerequisites: Ensure you have a QR code library included in your HTML (e.g., `qrcode.min.js`).
+**Prerequisites:** Ensure you have a QR code library included in your HTML (e.g., `qrcode.min.js`).
 
 **Handling the Handshake:**
 
