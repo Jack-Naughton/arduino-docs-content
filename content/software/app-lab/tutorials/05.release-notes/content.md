@@ -10,8 +10,7 @@ author: Arduino Team
 
 This page contains all release notes for Arduino App Lab. To access the software, go [here](https://www.arduino.cc/en/software/#app-lab-section).
 
-<Alert type="note">Note that you need to have an UNO Q ([2GB](https://store.arduino.cc/products/uno-q) or [4GB](https://store.arduino.cc/products/uno-q-4gb)) to use Arduino App Lab.
-</Alert>
+>Note: You need to have an UNO Q ([2GB](https://store.arduino.cc/products/uno-q) or [4GB](https://store.arduino.cc/products/uno-q-4gb)) to use Arduino App Lab.
 
 ## Releases
 
@@ -59,9 +58,7 @@ See a full list of what's new and which bugs have been fixed below.
 * Examples
   * Fixes on Object Detection in case of multiple detection
 
-<Alert type="note">
-You can always find the latest release [here](https://github.com/arduino/arduino-app-lab/releases). 
-</Alert>
+>You can always find the latest release [here](https://github.com/arduino/arduino-app-lab/releases). 
 
 ## Previous Releases
 
