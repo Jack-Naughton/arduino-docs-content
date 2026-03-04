@@ -85,7 +85,7 @@ Below is a list of release notes for previous versions.
 - **Network Errors:** The system now correctly identifies and reports "wrong password" errors when connecting to a network.
 - **README Display:** Fixed a bug in Network mode that caused README files to appear corrupted or fail to load.
 - **Security:** Applied security updates to the open-source repository.
-#### What's new
+#### What's New
 
 - Flasher tool integrated in App Lab (for outdate boards)
 - Skip WiFi step with warning (WiFi dependent features not managed yet)
@@ -95,7 +95,7 @@ Below is a list of release notes for previous versions.
 - Editor QOL updates
 - UI rework
 
-#### What's fixed
+#### What's Fixed
 
 - Disappearing App.yaml/README.md on app/brick configuration
 - Arduino App UI occasionally not opening
