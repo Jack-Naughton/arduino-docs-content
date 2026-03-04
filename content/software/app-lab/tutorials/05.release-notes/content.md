@@ -87,7 +87,7 @@ Below is a list of release notes for previous versions.
 - **Security:** Applied security updates to the open-source repository.
 #### What's New
 
-- Flasher tool integrated in App Lab (for outdate boards)
+- Flasher tool integrated in App Lab (for outdated boards)
 - Skip WiFi step with warning (WiFi dependent features not managed yet)
 - Syntax highlighting for Web dev code (js/ts, css/scss, html, json)
 - Analytics enhancement to distinguish SBC/PC users
