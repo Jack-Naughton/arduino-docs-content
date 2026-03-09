@@ -1,6 +1,6 @@
 ---
 title: UNO Q
-url_shop: https://store-usa.arduino.cc/pages/uno-q
+url_shop: https://store.arduino.cc/pages/uno-q
 primary_button_url: /tutorials/uno-q/user-manual
 primary_button_title: User Manual
 secondary_button_url: /software/app-lab/tutorials/getting-started/
