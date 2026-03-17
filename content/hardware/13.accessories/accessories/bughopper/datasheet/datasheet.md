@@ -103,6 +103,8 @@ The main features of the Bughopper are highlighted in the table shown below.
 
 The Bughopper connectors pinout is shown in the figure below.
 
+<img src="assets/Bughopper_Simple_Pinout.png" alt="Bughopper pinout." style="width: 85%; height: auto;"></img>
+
 <div style="page-break-after: always;"></div>
 
 ### Block Diagram
