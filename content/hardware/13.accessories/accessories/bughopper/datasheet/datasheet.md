@@ -127,6 +127,8 @@ The Bughopper's architecture can be summarized in the following functional block
 
 The Arduino Bughopper is powered through its USB-C connector:
 
+<img src="assets/Bughopper_Power_Tree.png" alt="Bughopper power tree." style="width: 85%; height: auto;"></img>
+
 - <p style="text-align: justify;"><strong>USB-C connector (+5 VDC)</strong>: The primary and only power input. When connected to a USB host (development machine), the board receives +5 VDC through V<sub>BUS</sub>. This voltage powers the FT230XQ's VCC pin directly.</p>
 - <p style="text-align: justify;"><strong>Internal +3.3 VDC LDO (FT230XQ-R V<sub>3V3OUT</sub>)</strong>: The FT230XQ-R generates +3.3 VDC from the +5 VDC USB supply using its integrated LDO regulator. This regulated output powers the FT230XQ and the level translator's host side.</p>
 - <p style="text-align: justify;"><strong>V<sub>TARGET</sub></strong>: This is not a power input to the Bughopper. It is the voltage reference supplied by the connected Arduino UNO Q through the JCTL connector. V<sub>TARGET</sub> is used as the reference for the level translator's target side and as the supply for the V<sub>TARGET</sub> LED.</p>
