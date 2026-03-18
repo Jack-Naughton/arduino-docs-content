@@ -161,7 +161,7 @@ To set up the Bughopper with the UNO Q:
 2. <p style="text-align: justify;">Connect the Bughopper to your development machine using a USB-C data cable.</p>
 3. <p style="text-align: justify;">The board will appear as a standard serial COM port on your system thanks to FTDI's Virtual Com Port (VCP) drivers.</p>
 4. <p style="text-align: justify;">Open a serial terminal application (such as the Arduino IDE Serial Monitor, PuTTY, or any other terminal emulator) and select the Bughopper's COM port.</p>
-5. <p style="text-align: justify;">Use Arduino App Lab <strong>[1]</strong> to develop and deploy your Apps on the UNO Q as usual. Debug output routed through the JCTL interface will appear in the Bughopper's serial terminal, independently from the Arduino App Lab console.</p>
+5. <p style="text-align: justify;">Use Arduino App Lab <strong>[1]</strong> to develop and deploy your Apps on the UNO Q. Debug output routed through the JCTL interface will appear in the Bughopper's serial terminal, independently of the Arduino App Lab console.</p>
 
 <div style="background-color: rgba(0, 170, 228, 0.2); border-left: 6px solid rgba(0, 120, 180, 1); margin: 20px 0; padding: 15px;">
 <p style="text-align: justify;"><strong>Note:</strong> The Bughopper provides a serial channel that is <strong>separate</strong> from the UNO Q's main USB-C connection. This means you can monitor debug output through the Bughopper while Arduino App Lab communicates with the UNO Q through its own USB-C or network connection, without any interference between the two channels.</p>
