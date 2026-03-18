@@ -2040,8 +2040,6 @@ gst-launch-1.0 -v videotestsrc num-buffers=1000 \
 
 ### JSPI (A5) (JSPI1) - Mapa De Pin
 
-
-
 | **Pin** | **Designação** | **Rede/Função** | **Domínio** | **Notas**  |
 |--------:|-----------------|--------------------|------------|------------|
 |       1 | MISO            | PC2 (SPI2_MISO)    | 3,3 V      | -          |
@@ -2073,8 +2071,6 @@ gst-launch-1.0 -v videotestsrc num-buffers=1000 \
 <div style="page-break-after: always;"></div>
 
 ### JDIGITAL (A2) (JDIGITAL1) - Mapa De Pin
-
-
 
 | **Pino** | **Designação** | **Pino MCU** | **Funções** | **Domínio** | **Notas** |
 | ------: | --------------- | ----------- | ------------------------------------------- | ---------- | --------------------------- |
@@ -2415,11 +2411,6 @@ English:
 前述合法通信，指依電信管理法規定作業之無線電通信。
 低功率射頻器材須忍受合法通信或工業、科學及醫療用電波輻射性電機設備之干擾。
 應避免影響附近雷達系統之操作。
-
-## Anatel
-
-Este equipamento não tem direito à proteção contra interferência prejudicial e não pode causar interferência em sistemas devidamente autorizados. Para maiores informações, consulte o site da ANATEL – http://www.anatel.gov.br 
-
 
 # Company Information
 
