@@ -146,8 +146,6 @@ The Arduino Bughopper is powered through its USB-C connector:
 <strong>Safety Note:</strong> Do not attempt to power the Bughopper through any pin other than the USB-C connector. <strong>The header connector pins are designed for signal communication and voltage reference only, not for supplying power to the board</strong>.
 </div>
 
-<div style="page-break-after: always;"></div>
-
 ## Device Operation
 
 <div style="text-align:justify;">
