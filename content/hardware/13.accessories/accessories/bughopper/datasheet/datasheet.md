@@ -10,7 +10,7 @@ author: José Bagur
 
 # Description
 
-<p style="text-align: justify;">The Arduino Bughopper is a compact USB-to-UART bridge board designed to bring straightforward remote debugging to the Arduino UNO Q via its JCTL connector. Built around the FT230XQ, the Bughopper provides a reliable, high-speed serial link between your development machine and the UNO Q, enabling advanced debugging and logging without occupying the board's main I/O pins. Its compact 35 × 11 mm footprint, USB-C connectivity, and multiple header options make it easy to integrate into any workspace, enclosure, or automated test setup.</p>
+<p style="text-align: justify;">The Arduino Bughopper is a compact USB-to-UART bridge board designed to bring straightforward remote debugging to the Arduino UNO Q via its JCTL connector. Built around the FT230XQ, the Bughopper provides a reliable, high-speed serial link between your development machine and the UNO Q, enabling advanced debugging and logging without occupying the board's main I/O pins. Its compact 38.5 × 11 mm footprint, USB-C® connectivity, and multiple header options make it easy to integrate into any workspace, enclosure, or automated test setup.</p>
 
 # Target Areas:
 
