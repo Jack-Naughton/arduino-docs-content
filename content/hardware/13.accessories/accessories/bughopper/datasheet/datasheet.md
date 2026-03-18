@@ -185,7 +185,7 @@ To set up the Bughopper with the UNO Q:
 
 ## Mechanical Information
 
-<p style="text-align: justify;">The Arduino Bughopper is a compact, double-sided 35 mm × 11 mm board with a USB-C connector on one end, a female 2.54 mm 2×5 header on the opposite end, and a male 1.27 mm 2×5 header adjacent to it. The board's narrow form factor is designed for easy integration  into workspaces, enclosures, and automated test fixtures.</p>
+<p style="text-align: justify;">The Arduino Bughopper is a compact, double-sided board with a USB-C connector on one end, a female 2.54 mm 2×5 header on the opposite end, and a male 1.27 mm 2×5 header (J3) adjacent to it. The PCB body measures 35 mm × 11 mm; the overall board dimension, including the J3 1.27 mm header overhang, is 38.5 mm × 11 mm. The board's narrow form factor is designed for easy integration into workspaces, enclosures, and automated test fixtures.</p>
 
 ### Board Dimensions
 
