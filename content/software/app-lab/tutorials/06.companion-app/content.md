@@ -58,19 +58,19 @@ The system uses two communication channels:
 
 ## Mobile Camera Streaming
 
-To test this feature, we will leverage the **Mobile Object Detection** example inside the Arduino App Lab. It will allow us to easily learn how this feature works and try it out without the need to develop an App from scratch. 
+To test this feature, we will leverage the **Detect Objects on Smartphone Camera** example inside the Arduino App Lab. It will allow us to easily learn how this feature works and try it out without the need to develop an App from scratch. 
 
-![Mobile Object Detection](assets/mobile-example.png)
+![Detect Objects on Smartphone Camera](assets/mobile-example.png)
 
 ***To stream your phone's camera feed to your UNO Q, both must be on the same network.***
 
-***__Note__: The video stream is delivered over HTTP on **port 4912**. If you're on a corporate or restricted network, make sure this port is accessible. The initial pairing uses a separate WebSocket connection on a dynamically assigned port.***
+***__Note__: The video stream is delivered over HTTP on __port 4912__. If you're on a corporate or restricted network, make sure this port is accessible. The initial pairing uses a separate WebSocket connection on a dynamically assigned port.***
 
 ### Arduino App Lab Setup
 
 1. Ensure your Arduino UNO Q is powered and connected to the network.
 2. Open the Arduino App Lab on your computer.
-3. Run the **Mobile Object Detection** example in Arduino App Lab.
+3. Run the **Detect Objects on Smartphone Camera** example in Arduino App Lab.
 4. The App should open automatically in the web browser. You can open it manually via `<board-name>.local:7000`.
 5. The Web UI will display a **QR Code**.
   ![QR Code in the browser](assets/qr-code-full.png)
@@ -98,6 +98,7 @@ You can also configure your phone from the IoT Remote app without scanning the Q
    ![Start streaming](assets/start-streaming.png)
 4. The streaming will start right away.
 
+![Smartphone Camera Streaming](assets/Companion-app.gif)
 
 ## Mobile Integration Feature
 
