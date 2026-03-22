@@ -1,6 +1,6 @@
-<EssentialsColumn title="Tutorials for Bug Hopper">
+<EssentialsColumn title="Tutorials for the Bughopper">
   <EssentialElement title="User Manual" type="tutorial" link="/tutorials/bug-hopper/user-manual">
-    A technical reference to the Arduino Bug Hopper.
+    A technical reference to the Arduino Bughopper.
   </EssentialElement>
   <EssentialElement title="UNO Q Documentation" type="tutorial" link="/hardware/uno-q">
     Learn about the Arduino UNO Q board and its JCTL debug connector.
