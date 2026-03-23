@@ -19,7 +19,7 @@ The **UNO Media Carrier** is a carrier board that provides access to camera, dis
   </Feature>
 
   <Feature title="Passthrough Connector Design" image="connection">
-    Both the JMEDIA and JMISC connectors feature a passthrough design, allowing all UNO Q signals remain accessible for stacking additional modules or carriers in your setup.
+    Both the JMEDIA and JMISC connectors feature a passthrough design, allowing all UNO Q signals to remain accessible for stacking additional modules or carriers in your setup.
   </Feature>
 
   <Feature title="UNO Form Factor" image="uno-form-factor">
