@@ -317,7 +317,7 @@ An overview of the UNO Breakout Carrier high-level architecture is illustrated i
 
 ### Getting Started
 
-If you want to program your UNO Q to use the UNO Breakout Carrier while offline you need to install the Arduino® App Lab **[1]**. To connect the UNO Q to your computer, you will need a USB cable or an insternet connection (Network Mode), which can also provide power to the board.
+If you want to program your UNO Q to use the UNO Breakout Carrier while offline, you need to install the Arduino® App Lab **[1]**. To connect the UNO Q to your computer, you will need a USB cable or an internet connection (Network Mode), which can also provide power to the board.
 
 ### Online Resources
 
