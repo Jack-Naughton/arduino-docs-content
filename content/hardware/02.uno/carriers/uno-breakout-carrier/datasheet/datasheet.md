@@ -41,7 +41,7 @@ Rapid Prototyping, Proof of Concept, Edge AI, Research and Development
 **Embedded Hardware Development:** 
 - **Custom Interface Boards:** Rapidly design and test custom peripherals for the Arduino UNO Q. By providing direct access to the JMEDIA and JMISC connectors, developers can seamlessly route I2C, SPI, UART, and GPIO signals to custom interface boards without the need for complex adapters or soldering.
 - **Multimedia System Integration:** Leverage the comprehensive breakout of audio interfaces (HP OUT, LINE OUT, MIC IN, EAR OUT, PWM) to integrate the UNO Q into advanced multimedia and smart audio systems. The clearly labeled 2.54 mm male headers simplify wiring and testing, accelerating the development of complex embedded audio applications.
-- **Rapid Hardware Prototyping:** Expand the UNO Q's capabilities by easily integrating third-party modules and external hardware components. The Carrier's direct access to power rails and communication buses makes it an ideal platform for building out proofs of concept for advanced IoT, multimedia, and edge computing devices.
+- **Rapid Hardware Prototyping:** Expand the UNO Q's capabilities by easily integrating third-party modules and external hardware components. The carrier's direct access to power rails and communication buses makes it an ideal platform for building out proofs of concept for advanced IoT, multimedia, and edge computing devices.
 
 **R&D and Testing:**
 - **Automated Lab Setups:** Build reliable, organized, and accessible automated test rigs for hardware validation. The Breakout Carrier exposes all critical UNO Q control signals to standard headers, allowing test engineers to quickly connect measurement equipment and script automated QA tests for complex systems.
@@ -71,7 +71,7 @@ The UNO Breakout Carrier expands the connectivity of the Arduino UNO Q, featurin
 
 ### Board Topology
 
-![Top view - connectors](assets/topology-good.png)
+![Top view - connectors](assets/ASX00085-topology.png)
 
 | **Ref.** |                **Description**                |
 | :------: | :-------------------------------------------: |
@@ -85,7 +85,7 @@ The UNO Breakout Carrier expands the connectivity of the Arduino UNO Q, featurin
 
 The UNO Breakout Carrier pinout is shown in the following figure.
 
-![UNO Breakout Pinout](assets/Simple-pinout-ASX00085.png)
+![UNO Breakout Pinout](assets/ASX00085-simple-pinout.png)
 
 #### J14
 
@@ -311,7 +311,7 @@ The UNO Breakout Carrier pinout is shown in the following figure.
 
 An overview of the UNO Breakout Carrier high-level architecture is illustrated in the figure below.
 
-![UNO Breakout Carrier Block Diagram](assets/Block_Diagram.png)
+![UNO Breakout Carrier Block Diagram](assets/ASX00085-block-diagram.png)
 
 ## Device Operation
 
@@ -330,7 +330,7 @@ Now that you have learned the basics of what you can do with the carrier, you ca
 The outline and dimensions of the UNO Breakout Carrier and mounting holes can be seen in the following figure;
 all the dimensions are in mm.
 
-![Board outline and screw holes](assets/outline-good.png)
+![Board outline and screw holes](assets/ASX00085-outline.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -339,7 +339,7 @@ all the dimensions are in mm.
 The UNO Breakout Carrier's connectors are placed on the top side of the board, as shown in the figure below; all
 the dimensions are in mm.
 
-![Mechanical View of UNO Breakout Carrier's Connectors](assets/connectors.png)
+![Mechanical View of UNO Breakout Carrier's Connectors](assets/ASX00085-connectors.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -437,16 +437,16 @@ Hereby, Arduino S.r.l. declares that this product is in compliance with essentia
 | Company Address | Via Andrea Appiani, 25 - 20900 MONZA (Italy) |
 
 ## Reference Documentation
-|          **Ref**          | **Link**                                                     |
-| :-----------------------: | ------------------------------------------------------------ |
-|   Arduino App Lab         | https://docs.arduino.cc/software/app-lab/                      |
-|   Arduino IDE (Desktop)   | https://www.arduino.cc/en/Main/Software                      |
-|    Arduino IDE (Cloud)    | https://create.arduino.cc/editor                             |
-| Cloud IDE Getting Started | https://create.arduino.cc/projecthub/Arduino_Genuino/getting-started-with-arduino-web-editor-4b3e4a |
-|    Arduino Pro Website    | https://www.arduino.cc/pro                                   |
-|        Project Hub        | https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending |
-|     Library Reference     | https://www.arduino.cc/reference/en/                         |
-|       Online Store        | https://store.arduino.cc/                                    |
+| **No.** |          **Ref**          | **Link**                                                                                            |
+| :-----: | :-----------------------: | --------------------------------------------------------------------------------------------------- |
+|    1    |      Arduino App Lab      | https://docs.arduino.cc/software/app-lab/                                                           |
+|    2    |   Arduino IDE (Desktop)   | https://www.arduino.cc/en/Main/Software                                                             |
+|    3    |    Arduino IDE (Cloud)    | https://create.arduino.cc/editor                                                                    |
+|    4    | Cloud IDE Getting Started | https://create.arduino.cc/projecthub/Arduino_Genuino/getting-started-with-arduino-web-editor-4b3e4a |
+|    5    |    Arduino Pro Website    | https://www.arduino.cc/pro                                                                          |
+|    6    |        Project Hub        | https://create.arduino.cc/projecthub?by=part&part_id=11332&sort=trending                            |
+|    7    |     Library Reference     | https://www.arduino.cc/reference/en/                                                                |
+|    8    |       Online Store        | https://store.arduino.cc/                                                                           |
 
 ## Change Log
 | **Date**   | **Revision** | **Changes**                                 |
