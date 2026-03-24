@@ -54,6 +54,7 @@ The default I²C address for the **Modulino LED Matrix** module is:
 ![Modulino LED Matrix Pinout](assets/MatrixPinouts.png)
 
 **Qwiic / I2C (1×4 Header)**
+
 | **Pin** | **Function**         |
 |---------|----------------------|
 | GND     | Ground               |
@@ -64,6 +65,7 @@ The default I²C address for the **Modulino LED Matrix** module is:
 These pads and the Qwiic connectors share the same I2C bus at 3.3 V.
 
 **Additional 1×6 Header (Debug & Power)**
+
 | **Pin** | **Function**     |
 |---------|------------------|
 | GND     | Ground           |
