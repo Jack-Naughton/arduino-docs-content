@@ -1,6 +1,6 @@
 ---
 identifier: ABX00152
-title: Arduino® Modulino® LED Matrix
+title: Arduino® Modulino LED Matrix
 type: maker
 author: Pedro Sousa Lima
 ---
@@ -9,7 +9,7 @@ author: Pedro Sousa Lima
 
 # Description
 
-The Arduino Modulino® LED Matrix features an 8×12 LED matrix (96 blue LEDs total) controlled by an on-board STM32C011F4U6TR microcontroller using charlieplexing technology. This display module provides LED matrix functionality for enabling text, graphics, animations, and visual feedback for a wide range of interactive projects.
+The Arduino Modulino LED Matrix features an 8×12 LED matrix (96 blue LEDs total) controlled by an on-board STM32C011F4U6TR microcontroller using charlieplexing technology. This display module provides LED matrix functionality for enabling text, graphics, animations, and visual feedback for a wide range of interactive projects.
 
 # Target Areas
 
@@ -38,7 +38,7 @@ Maker, beginner, education
 ### Contents
 | **SKU**    | **Name**              | **Purpose**                            | **Quantity** |
 | ---------- | --------------------- | -------------------------------------- | ------------ |
-| ABX00152   | Modulino® LED Matrix  | 8×12 programmable LED display          | 1            |
+| ABX00152   | Modulino LED Matrix  | 8×12 programmable LED display          | 1            |
 |            | I2C Qwiic cable       | Compatible with the Qwiic standard     | 1            |
 
 ## Related Products
@@ -58,17 +58,17 @@ Maker, beginner, education
 - LED matrix: Variable based on number of active LEDs (up to ~200 mA peak)
 
 ## Power Tree
-The power tree for the Modulino® LED Matrix can be consulted below:
+The power tree for the Modulino LED Matrix can be consulted below:
 
-![Modulino® LED Matrix Power Tree](assets/Modulino_Matrix_Power_Tree.png)
+![Modulino LED Matrix Power Tree](assets/Modulino_Matrix_Power_Tree.png)
 
 ## Block Diagram
 This node includes an STM32C011F4U6TR microcontroller that drives an 8×12 LED matrix using charlieplexing with 11 GPIO pins. It communicates via I2C by default, but can be reprogrammed via SWD for custom display functions.
 
-![Modulino® LED Matrix Block Diagram](assets/Modulino_Matrix_Block_Diagram.png)
+![Modulino LED Matrix Block Diagram](assets/Modulino_Matrix_Block_Diagram.png)
 
 ## Functional Overview
-The Modulino® LED Matrix uses charlieplexing technology to control 96 blue LEDs (LTST-C191TBK) with only 11 microcontroller pins (PA0-PA8, PA11, PA12). This efficient multiplexing technique allows individual LED control whilst minimising pin usage. The STM32C011F4U6TR manages the complex timing required for charlieplexing and provides simple I2C commands for drawing text, graphics, and animations.
+The Modulino LED Matrix uses charlieplexing technology to control 96 blue LEDs (LTST-C191TBK) with only 11 microcontroller pins (PA0-PA8, PA11, PA12). This efficient multiplexing technique allows individual LED control whilst minimising pin usage. The STM32C011F4U6TR manages the complex timing required for charlieplexing and provides simple I2C commands for drawing text, graphics, and animations.
 
 ### Technical Specifications (Module-Specific)
 | **Specification**       | **Details**                                     |
@@ -116,17 +116,17 @@ These solderable pads and the Qwiic connectors share the same I2C bus at 3.3 V.
 
 ### Mechanical Information
 
-![Modulino® LED Matrix Mechanical Information](assets/MatrixMec.png)
+![Modulino LED Matrix Mechanical Information](assets/MatrixMec.png)
 
 - Board dimensions: 41 mm × 25.36 mm
 - Thickness: 1.6 mm (±0.2 mm) 
 - Four mounting holes (⌀ 3.2 mm)
   - Hole spacing: 16 mm vertically, 32 mm horizontally
 
-![Modulino® Node Shape](assets/GenMech.png)
+![Modulino Node Shape](assets/GenMech.png)
 
 ### I2C Address Reference
-| **Board Silk Name** | **Sensor/Actuator**     | **Modulino® I2C Address (HEX)** | **Editable Addresses (HEX)**                | **Hardware I2C Address (HEX)** |
+| **Board Silk Name** | **Sensor/Actuator**     | **Modulino I2C Address (HEX)** | **Editable Addresses (HEX)**                | **Hardware I2C Address (HEX)** |
 |---------------------|-------------------------|--------------------------------|---------------------------------------------|--------------------------------|
 | MODULINO LED MATRIX | 8×12 LED Matrix         | 0x32                           | Any custom address (via software config.)   | 0x19                           |
 
