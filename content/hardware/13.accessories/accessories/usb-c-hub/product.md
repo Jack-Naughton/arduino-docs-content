@@ -1,6 +1,6 @@
 ---
 title: USB-C Hub (8 in 1)
-url_shop: 
+url_shop: https://store.arduino.cc/products/usb-c-hub
 sku: [TPX00241]
 ---
 
