@@ -1,6 +1,6 @@
 ---
 title: Modulino LED Matrix
-url_shop: https://store.arduino.cc/products/modulino-matrix
+url_shop: https://store.arduino.cc/products/modulino-led-matrix
 url_guide: https://courses.arduino.cc/plugandmake
 primary_button_url: https://docs.arduino.cc/tutorials/modulino-matrix/how-matrix/
 primary_button_title: Get Started
