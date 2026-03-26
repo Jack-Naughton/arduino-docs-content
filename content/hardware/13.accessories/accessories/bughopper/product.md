@@ -1,12 +1,8 @@
 ---
 title: Bughopper
-url_shop: https://store.arduino.cc/products/bug-hopper
-primary_button_url: /tutorials/bug-hopper/user-manual/#first-use
-primary_button_title: Get Started
-core:
-certifications: [CE, RoHS, REACH, WEEE]
-forumCategorySlug: '/hardware/bug-hopper/TBD'
-productCode: ['TBD']
+url_shop: https://store.arduino.cc/products/bughopper
+primary_button_url: https://docs.arduino.cc/resources/datasheets/ABX00156-datasheet.pdf
+primary_button_title: Datasheet
 sku: [ABX00156]
 ---
 

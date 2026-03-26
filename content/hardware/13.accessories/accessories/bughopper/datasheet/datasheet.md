@@ -273,18 +273,18 @@ As a global supplier of electronic and electrical components, Arduino is aware o
 
 ## Reference Documentation
 
-| **No.** | **Reference**                   | **Link**                                               |
-|:-------:|---------------------------------|--------------------------------------------------------|
-|    1    | Arduino App Lab                 | TBD                                                    |
-|    2    | UNO Q Documentation             | TBD                                                    |
-|    3    | FTDI VCP Drivers                | https://ftdichip.com/drivers/vcp-drivers/              |
-|    4    | Bughopper Documentation         | TBD                                                    |
-|    5    | Project Hub                     | https://create.arduino.cc/projecthub                   |
-|    6    | Library Reference               | https://www.arduino.cc/reference/en/                   |
-|    7    | Arduino Store                   | https://store.arduino.cc/                              |
+| **No.** |      **Reference**      | **Link**                                    |
+|:-------:|:-----------------------:|---------------------------------------------|
+|    1    |     Arduino App Lab     | https://docs.arduino.cc/software/app-lab/   |
+|    2    |   UNO Q Documentation   | https://docs.arduino.cc/hardware/uno-q/     |
+|    3    |     FTDI VCP Drivers    | https://ftdichip.com/drivers/vcp-drivers/   |
+|    4    | Bughopper Documentation | https://docs.arduino.cc/hardware/bughopper/ |
+|    5    |       Project Hub       | https://create.arduino.cc/projecthub        |
+|    6    |    Library Reference    | https://www.arduino.cc/reference/en/        |
+|    7    |      Arduino Store      | https://store.arduino.cc/                   |
 
 ## Document Revision History
 
-|  **Date**  | **Revision** |       **Changes**       |
-|:----------:|:------------:|:-----------------------:|
-| TBD        |      1       |     First release       |
+|  **Date**  | **Revision** |  **Changes**  |
+|:----------:|:------------:|:-------------:|
+| 27/03/2026 |       1      | First release |
