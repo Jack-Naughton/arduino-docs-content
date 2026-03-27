@@ -1,5 +1,5 @@
 <FeatureDescription>
-The Arduino Bughopper is a compact USB-to-UART debug accessory built around the FT230XQ bridge IC. It connects to compatible target boards through their 1.27 mm debug connector, providing a dedicated serial debug channel without occupying the board's main USB port. Onboard ESD protection, automatic voltage level translation and status LEDs make it a reliable tool for remote debugging, firmware logging and continuous UART monitoring.
+The Arduino Bughopper is a compact USB-to-UART debug accessory built around the FT230XQ bridge IC. It connects to compatible target boards through their JCTL 2.54 mm debug connector, providing a dedicated serial debug channel without occupying the board's main USB port. Onboard ESD protection, automatic voltage level translation and status LEDs make it a reliable tool for remote debugging, firmware logging and continuous UART monitoring.
 </FeatureDescription>
 
 <FeatureList>
@@ -23,7 +23,7 @@ ESD diodes protect the USB data lines against electrostatic discharge, safeguard
 </Feature>
 
 <Feature title="Dual Output Connectors" image="communication">
-The board provides two physical connection options for the 1.27 mm debug connector interface: a female 2.54 mm 2×5 header (J2) for direct cable attachment and a male 1.27 mm 2×5 header (J3) for compact ribbon cable setups, offering flexible integration into any workspace or enclosure.
+The board provides two physical connection options: a female 2.54 mm 2×5 header (J2) for direct connection to JCTL header and a male 1.27 mm 2×5 header (J3) for compact ribbon cable setups, offering flexible integration into any workspace or enclosure.
 <FeatureWrapper>
   <FeatureLink title="Documentation" url="/tutorials/bug-hopper/user-manual/#connectors"/>
 </FeatureWrapper>
@@ -41,7 +41,7 @@ Four onboard LEDs provide at-a-glance visibility of the system state: a green LE
 </Feature>
 
 <Feature title="Auxiliary GPIOs" image="mcu">
-Four auxiliary GPIO lines (CBUS0–CBUS3) are available on the output connectors, allowing the FT230XQ to send control signals to the target board alongside the main serial link.
+Four auxiliary GPIO lines (CBUS0–CBUS3) are available  as open-drain signals on the output connectors, allowing the FT230XQ to send control signals to the target board preventing back-powering.
 <FeatureWrapper>
   <FeatureLink title="Documentation" url="/tutorials/bug-hopper/user-manual/#cbus-gpio"/>
 </FeatureWrapper>
