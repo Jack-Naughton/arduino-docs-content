@@ -11,7 +11,7 @@ Level Translator:
 USB:
   USB-C®: Host connection (to development machine)
 Output Connectors:
-  J2: Female 2.54 mm 2×5 header (direct cable connection)
+  J2: Female 2.54 mm 2×5 header (direct target board JCTL header connection)
   J3: Male 1.27 mm 2×5 header (ribbon cable connection)
 Auxiliary GPIOs:
   Lines: 4 (CBUS0–CBUS3)
