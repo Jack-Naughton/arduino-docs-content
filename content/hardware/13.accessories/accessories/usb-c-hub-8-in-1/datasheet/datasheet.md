@@ -206,8 +206,13 @@ This equipment complies with FCC radiation exposure limits set forth for an unco
 |:---:|---------------|--------------------------------------------------------|
 |  1  | Arduino Store | [https://store.arduino.cc/](https://store.arduino.cc/) |
 
+## Trademark Acknowledgement
+
+The terms HDMI, HDMI High-Definition Multimedia Interface, HDMI trade dress and the HDMI Logos are trademarks or registered trademarks of HDMI Licensing Administrator, Inc.
+
 ## Document Revision History
 
 |  **Date**  | **Revision** | **Changes**   |
 |:----------:|:------------:|---------------|
+| 07/04/2026 |      2       | Added HDMI trademark acknowledgement |
 | 27/03/2026 |      1       | First release |
