@@ -8,7 +8,7 @@ tags:
 author: 'Mohammed Hussain Jahangiri'
 source: 'community'
 hardware:
-  - hardware/02.uno/boards/arduino-uno-rev3
+  - hardware/02.uno/boards/uno-rev3
 software:
   - MATLAB
 ---
